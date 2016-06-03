@@ -224,51 +224,6 @@
             "location": "/work/DG_note/#notes-to-run-time_domain_dg", 
             "text": "ssh to conte  cd Time_domain_DG/RKDG/input\nqsub simu_qsub  run code interactively  -q gmig -l nodes=1:ppn=16,walltime=4:00:00  useful commends  qstat\nqstat -u  chen1430 \nqdel", 
             "title": "notes to run Time_domain_DG"
-        }, 
-        {
-            "location": "/work/Total_motes/", 
-            "text": "Notes on Total system\n\n\nexternal wifi signal: ep-guest\n\n\n\n\nusername: external01\n\n\npassword: !pass123\n\n\n\n\nlaptop login\n\n\n\n\nL0447957\n\n\nHouston1!\n\n\n\n\nlinux system login\n\n\n\n\nL0447957/uw password\n\n\n\n\nlaptop login with smart card\n\n\n\n\npin: my BOD\n\n\n\n\nlog in laudev\n\n\nssh laudev01\nssh laudev02\nicexdev\n\n\n\n\nlaudev\n\n\nautompirun -np 16 job.e\nnodeusage\nbjobs\nbkill #id\nbpeek\n\n\n\n\nmodule list\nmodule avail\n\n\ncontacts\n\n\n\n\n\n\n\n\nName\n\n\nemail\n\n\n\n\n\n\n\n\n\n\nHenri Calandra\n\n\n\"henri.calandra@total.com\"\n\n\n\n\n\n\nJing Wen\n\n\n\"jing.wen@total.com\"\n\n\n\n\n\n\nShen Wang\n\n\n\"shen.wang@total.com\"\n\n\n\n\n\n\nBertrand Dequet\n\n\n\"bertrand.dequet@total.com\"", 
-            "title": "Total motes"
-        }, 
-        {
-            "location": "/work/Total_motes/#notes-on-total-system", 
-            "text": "", 
-            "title": "Notes on Total system"
-        }, 
-        {
-            "location": "/work/Total_motes/#external-wifi-signal-ep-guest", 
-            "text": "username: external01  password: !pass123", 
-            "title": "external wifi signal: ep-guest"
-        }, 
-        {
-            "location": "/work/Total_motes/#laptop-login", 
-            "text": "L0447957  Houston1!", 
-            "title": "laptop login"
-        }, 
-        {
-            "location": "/work/Total_motes/#linux-system-login", 
-            "text": "L0447957/uw password", 
-            "title": "linux system login"
-        }, 
-        {
-            "location": "/work/Total_motes/#laptop-login-with-smart-card", 
-            "text": "pin: my BOD", 
-            "title": "laptop login with smart card"
-        }, 
-        {
-            "location": "/work/Total_motes/#log-in-laudev", 
-            "text": "ssh laudev01\nssh laudev02\nicexdev", 
-            "title": "log in laudev"
-        }, 
-        {
-            "location": "/work/Total_motes/#laudev", 
-            "text": "autompirun -np 16 job.e\nnodeusage\nbjobs\nbkill #id\nbpeek  module list\nmodule avail", 
-            "title": "laudev"
-        }, 
-        {
-            "location": "/work/Total_motes/#contacts", 
-            "text": "Name  email      Henri Calandra  \"henri.calandra@total.com\"    Jing Wen  \"jing.wen@total.com\"    Shen Wang  \"shen.wang@total.com\"    Bertrand Dequet  \"bertrand.dequet@total.com\"", 
-            "title": "contacts"
         }
     ]
 }
