@@ -177,56 +177,90 @@
 <li>
 <p>Prerequisite : </p>
 <ul>
-<li>see <a href="http://software.intel.com/en-us/articles/using-intel-compilers-for-linux-with-ubuntu">this link</a></li>
-</ul>
-<p><code>mv /bin/sh /bin/sh.orig
-ln -s /bin/bash /bin/sh</code>
-<em> Ubuntu 11.04 through Ubuntu 12.10  :
-</em> Composer XE  (aka version compiler versions 12.x and 13.x) prerequisites for Ubuntu Desktop, assuming that gcc and g++ are installed already:</p>
-<p><code>apt-get install build-essential
+<li>
+<p>see <a href="http://software.intel.com/en-us/articles/using-intel-compilers-for-linux-with-ubuntu">this link</a></p>
+<pre><code>mv /bin/sh /bin/sh.orig
+ln -s /bin/bash /bin/sh
+</code></pre>
+</li>
+<li>
+<p>Ubuntu 11.04 through Ubuntu 12.10  :</p>
+</li>
+<li>Composer XE  (aka version compiler versions 12.x and 13.x) prerequisites for Ubuntu Desktop, assuming that gcc and g++ are installed already:<pre><code>apt-get install build-essential
 apt-get install gcc-multilib
 apt-get install rpm
 apt-get install ia32-libs  #only needed if you install the 32bit compiler
-apt-get install openjdk-6-jre-headless</code>
-<em> Download Fortran compiler intel. An email address is required.  <a href="http://software.intel.com/en-us/non-commercial-software-development">Download link</a>
-</em> Install: 
-* locate the download tar file</p>
-<p><code>tar -xvzf l_fcomposer.tgz
+apt-get install openjdk-6-jre-headless
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Download Fortran compiler intel. An email address is required.  <a href="http://software.intel.com/en-us/non-commercial-software-development">Download link</a></p>
+</li>
+<li>
+<p>Install: </p>
+<ul>
+<li>
+<p>locate the download tar file</p>
+<pre><code>tar -xvzf l_fcomposer.tgz
 cd l_fcomposer
-sudo ./install.sh</code>
-<em> Follow the installation instructions:
-    - choose Option 1 to install Intel Fortran, 
-    - choose Option 1 to proceed with a serial number.
-    - type in the serial number (case-sensitive) given in the email. (XXXX-XXXXXXXX). Choose 1 for a default install.
-    - Press Enter to read the license agreement. The spacebar speeds through this quickly. Type 'accept' to accept the license agreement. 
-    - At some point the installation may stop to ask for some 'optional' packages to be installed. Skip this warning.
-</em> Config system: 
-* After the installation is finished go to the terminal and:</p>
-<p><code>cd ~
-nano .bashrc</code>
-* go to the end of this file and add the following lines:</p>
-<p><code>PATH="/opt/intel/Compiler/.../bin/intel64:$PATH"
+sudo ./install.sh
+</code></pre>
+</li>
+<li>
+<p>Follow the installation instructions:</p>
+<ul>
+<li>choose Option 1 to install Intel Fortran, </li>
+<li>choose Option 1 to proceed with a serial number.</li>
+<li>type in the serial number (case-sensitive) given in the email. (XXXX-XXXXXXXX). Choose 1 for a default install.</li>
+<li>Press Enter to read the license agreement. The spacebar speeds through this quickly. Type 'accept' to accept the license agreement. </li>
+<li>At some point the installation may stop to ask for some 'optional' packages to be installed. Skip this warning.</li>
+</ul>
+</li>
+<li>Config system: </li>
+<li>
+<p>After the installation is finished go to the terminal and:</p>
+<pre><code>cd ~
+nano .bashrc
+</code></pre>
+</li>
+<li>
+<p>go to the end of this file and add the following lines:</p>
+<pre><code>PATH="/opt/intel/Compiler/.../bin/intel64:$PATH"
 export PATH
 LD_LIBRARY_PATH="/opt/intel/Compiler/.../lib/intel64:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH</code></p>
-<ul>
-<li>Enter the right path in the lines above. Exit the file by saving the changes. </li>
-</ul>
+export LD_LIBRARY_PATH
+</code></pre>
+</li>
+<li>
+<p>Enter the right path in the lines above. Exit the file by saving the changes. </p>
+</li>
+<li>
 <p>let the system read the updated paths by the command:</p>
-<p><code>source .bashrc</code>
-The installation is finished.</p>
+<pre><code>source .bashrc
+</code></pre>
+</li>
+</ul>
+<p>The installation is finished.</p>
 </li>
 <li>
 <p>Test: </p>
 <ul>
-<li>write simple file as hello.f containing</li>
-</ul>
-<p><code>program hello
+<li>
+<p>write simple file as hello.f containing</p>
+<pre><code>program hello
 print *,'Hello World!'
-end program</code>
-* Compile and run your code by the command:</p>
-<p><code>ifort hello.f
-./a.out</code></p>
+end program
+</code></pre>
+</li>
+<li>
+<p>Compile and run your code by the command:</p>
+<pre><code>ifort hello.f
+./a.out
+</code></pre>
+</li>
+</ul>
 </li>
 </ol></div>
         </div>
