@@ -76,12 +76,6 @@
                     <ul class="dropdown-menu">
                     
                         
-<li >
-    <a href="../Fortran/">Fortran</a>
-</li>
-
-                    
-                        
 <li class="active">
     <a href="./">Fortran on Ubuntu</a>
 </li>
@@ -111,12 +105,6 @@
 </li>
 
                     
-                        
-<li >
-    <a href="../python_notes/">Python notes</a>
-</li>
-
-                    
                     </ul>
                 </li>
             
@@ -129,6 +117,12 @@
                         
 <li >
     <a href="../../work/DG_note/">DG note</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../work/python_notes/">Python notes</a>
 </li>
 
                     
@@ -146,7 +140,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../Fortran/">
+                    <a rel="next" href="../../fun/fun_places_to_go/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
@@ -165,17 +159,25 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#install-intel-fortan-on-ubuntu-1210">install intel Fortan on Ubuntu 12.10</a></li>
+        <li class="main active"><a href="#install-intel-fortan-on-ubuntu-1210">Install intel Fortan on Ubuntu 12.10</a></li>
+        
+            <li><a href="#prerequisite">Prerequisite</a></li>
+        
+            <li><a href="#download">Download</a></li>
+        
+            <li><a href="#install">Install</a></li>
+        
+            <li><a href="#config-system">Config system</a></li>
+        
+            <li><a href="#test">Test</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="install-intel-fortan-on-ubuntu-1210">install intel Fortan on Ubuntu 12.10</h1>
-<ol>
-<li>
-<p>Prerequisite : </p>
+<h1 id="install-intel-fortan-on-ubuntu-1210">Install intel Fortan on Ubuntu 12.10</h1>
+<h2 id="prerequisite">Prerequisite</h2>
 <ul>
 <li>
 <p>see <a href="http://software.intel.com/en-us/articles/using-intel-compilers-for-linux-with-ubuntu">this link</a></p>
@@ -194,12 +196,11 @@ apt-get install openjdk-6-jre-headless
 </code></pre>
 </li>
 </ul>
-</li>
-<li>
-<p>Download Fortran compiler intel. An email address is required.  <a href="http://software.intel.com/en-us/non-commercial-software-development">Download link</a></p>
-</li>
-<li>
-<p>Install: </p>
+<h2 id="download">Download</h2>
+<ul>
+<li>Download Fortran compiler intel. An email address is required.  <a href="http://software.intel.com/en-us/non-commercial-software-development">Download link</a></li>
+</ul>
+<h2 id="install">Install</h2>
 <ul>
 <li>
 <p>locate the download tar file</p>
@@ -218,7 +219,9 @@ sudo ./install.sh
 <li>At some point the installation may stop to ask for some 'optional' packages to be installed. Skip this warning.</li>
 </ul>
 </li>
-<li>Config system: </li>
+</ul>
+<h2 id="config-system">Config system</h2>
+<ul>
 <li>
 <p>After the installation is finished go to the terminal and:</p>
 <pre><code>cd ~
@@ -243,9 +246,7 @@ export LD_LIBRARY_PATH
 </li>
 </ul>
 <p>The installation is finished.</p>
-</li>
-<li>
-<p>Test: </p>
+<h2 id="test">Test</h2>
 <ul>
 <li>
 <p>write simple file as hello.f containing</p>
@@ -260,9 +261,7 @@ end program
 ./a.out
 </code></pre>
 </li>
-</ul>
-</li>
-</ol></div>
+</ul></div>
         </div>
 
         <footer class="col-md-12">

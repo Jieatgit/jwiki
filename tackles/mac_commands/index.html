@@ -77,12 +77,6 @@
                     
                         
 <li >
-    <a href="../Fortran/">Fortran</a>
-</li>
-
-                    
-                        
-<li >
     <a href="../Fortran_on_Ubuntu/">Fortran on Ubuntu</a>
 </li>
 
@@ -111,12 +105,6 @@
 </li>
 
                     
-                        
-<li >
-    <a href="../python_notes/">Python notes</a>
-</li>
-
-                    
                     </ul>
                 </li>
             
@@ -129,6 +117,12 @@
                         
 <li >
     <a href="../../work/DG_note/">DG note</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../work/python_notes/">Python notes</a>
 </li>
 
                     
@@ -165,30 +159,28 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#1">(1)</a></li>
+        <li class="main active"><a href="#compress-files">Compress files</a></li>
         
     
-        <li class="main "><a href="#2">(2)</a></li>
+        <li class="main "><a href="#disk-usage">Disk usage</a></li>
         
     
-        <li class="main "><a href="#3-4252014">(3) 4.25.2014</a></li>
+        <li class="main "><a href="#vim-latex">vim-latex</a></li>
         
     
-        <li class="main "><a href="#4-contercacpurdueedu-cluster">(4) conte.rcac.purdue.edu cluster:</a></li>
+        <li class="main "><a href="#purdue-server">Purdue server</a></li>
         
     
-        <li class="main "><a href="#5-virtualbox">(5) virtualbox</a></li>
+        <li class="main "><a href="#virtualbox">virtualbox</a></li>
         
     
-        <li class="main "><a href="#6-grip">(6) grip</a></li>
+        <li class="main "><a href="#grip">grip</a></li>
         
     
-        <li class="main "><a href="#7-sypder-py2">(7) Sypder-py2</a></li>
+        <li class="main "><a href="#sypder-py2">Sypder-py2</a></li>
         
     
-        <li class="main "><a href="#8-setting-up-ssh-publicprivate-keys">(8) Setting up SSH public/private keys</a></li>
-        
-            <li><a href="#ssh-version-2">SSH Version 2</a></li>
+        <li class="main "><a href="#ssh-publicprivate-keys">SSH public/private keys</a></li>
         
     
         <li class="main "><a href="#screen">screen</a></li>
@@ -198,68 +190,62 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h3 id="1">(1)</h3>
+<h3 id="compress-files">Compress files</h3>
 <ul>
 <li>
 <p>unpack .tar.gz files  </p>
-<table>
-<thead>
-<tr>
-<th>- $ gunzip -c foo.tar.gz</th>
-<th>tar xopf -</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
+<pre><code>$ gunzip -c foo.tar.gz | tar xopf - 
+$ gunzip -c foo.tar.gz | tar xopft -
+</code></pre>
 </li>
 <li>
-<p>unpack .tar files   <br />
-$ tar xopf foo.tar<br />
-$ tar xopft foo.tar</p>
+<p>unpack .tar files     </p>
+<pre><code>$ tar xopf foo.tar  
+$ tar xopft foo.tar
+</code></pre>
 </li>
 <li>
-<p>unpack .zip files 
-$ unzip -a foo.zip</p>
+<p>unpack .zip files </p>
+<pre><code>$ unzip -a foo.zip
+</code></pre>
 </li>
 <li>
-<p>pack .zip files <br />
-$ zip -r y.zip y.pdf</p>
+<p>pack .zip files   </p>
+<pre><code>$ zip -r y.zip y.pdf
+</code></pre>
 </li>
 </ul>
-<h3 id="2">(2)</h3>
-<p>disk usage</p>
-<ul>
-<li>$ du -h</li>
-<li>$ du -sh</li>
-<li>$ du -sh *</li>
-<li>$ du -sh dir_path</li>
-<li>$ du -a</li>
-<li>$ du -c # total contral</li>
-<li>
-<p>$ du -sh #show total usage in the dir</p>
-</li>
-<li>
-<p>$ df -h</p>
-</li>
-</ul>
-<h3 id="3-4252014">(3) 4.25.2014</h3>
+<h3 id="disk-usage">Disk usage</h3>
+<pre><code>$ du -h
+$ du -sh
+$ du -sh *
+$ du -sh dir_path
+$ du -a
+$ du -c # total contral
+$ du -sh #show total usage in the dir
+
+$ df -h
+</code></pre>
+
+<h3 id="vim-latex">vim-latex</h3>
 <ul>
 <li>vim-latex is install in ~/.vim</li>
 <li>to configure vim only for latex:</li>
 <li>edit file ~/.vim/ftplugin/tex_latexSuite.vim</li>
 </ul>
-<h3 id="4-contercacpurdueedu-cluster">(4) conte.rcac.purdue.edu cluster:</h3>
-<ul>
-<li>$ module avail  # shows all available modules</li>
-<li>$ module load   # load module, for example:</li>
-<li>$ module load matlab/R2013a</li>
-</ul>
-<h3 id="5-virtualbox">(5) virtualbox</h3>
+<h3 id="purdue-server">Purdue server</h3>
+<p>conte.rcac.purdue.edu cluster:</p>
+<pre><code>$ module avail  # shows all available modules
+$ module load   # load module, for example:
+$ module load matlab/R2013a
+</code></pre>
+
+<h3 id="virtualbox">virtualbox</h3>
 <ul>
 <li>ID/pw ubuntu/chenjie</li>
 <li>
 <p>change ubuntu password:</p>
-<ul>
+<ol>
 <li>reboot while hold shift</li>
 <li>Let your virtual Machine to capture your mouse.</li>
 <li>Hold the shift key down to get the grub menu.</li>
@@ -267,26 +253,25 @@ $ zip -r y.zip y.pdf</p>
 <li>Select drop to root shell prompt.</li>
 <li>type command: mount -rw -o remount /</li>
 <li>Now, change with # passwd [username] (You can also see the list of users using # nano /etc/passwd).</li>
-</ul>
+</ol>
 </li>
 <li>
 <p>mount shared folder:</p>
 <ul>
 <li>add shared folder in virtualBox</li>
 <li>type command in ubuntu: <br />
-$ sudo mount -t vboxsf -o uid=1000,gid=1000 share /home/<user>/vboxshare</li>
+<code>$ sudo mount -t vboxsf -o uid=1000,gid=1000 share /home/&lt;user&gt;/vboxshare</code></li>
 </ul>
 </li>
 </ul>
-<h3 id="6-grip">(6) grip</h3>
-<p>https://github.com/joeyespo/grip
-use grip to convert md file to html file from command line</p>
+<h3 id="grip">grip</h3>
+<p>use grip to convert md file to html file from command line. see <a href="https://github.com/joeyespo/grip">this link</a></p>
 <pre><code>grip 
 grip foo.md
 grip foo.md --export foo.html
 </code></pre>
 
-<h3 id="7-sypder-py2">(7) Sypder-py2</h3>
+<h3 id="sypder-py2">Sypder-py2</h3>
 <p>add a new module to Syper</p>
 <pre><code>$python
 &gt;&gt;&gt;import talib
@@ -304,14 +289,13 @@ rm new_module.egg
 <pre><code>$cp -r new_module_folder /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7
 </code></pre>
 
-<h3 id="8-setting-up-ssh-publicprivate-keys">(8) Setting up SSH public/private keys</h3>
+<h3 id="ssh-publicprivate-keys">SSH public/private keys</h3>
 <p>SSH (Secure Shell) can be set up with public/private key pairs so that you do not have to type the password each time. Because SSH is the transport for other services such as SCP (secure copy), SFTP (secure file transfer), and other services (CVS, etc), this can be very convenient and save you a lot of typing.</p>
-<h4 id="ssh-version-2">SSH Version 2</h4>
 <p>On the local machine, type the BOLD part. The non-bold part is what you might see as output or prompt.</p>
 <ul>
 <li>
 <p>Step 1: </p>
-<p><code>% ssh-keygen -t dsa 
+<pre><code>$ ssh-keygen -t dsa 
     Generating public/private dsa key pair. 
     Enter file in which to save the key (~/.ssh/id_dsa): (just type return) 
     Enter passphrase (empty for no passphrase): (just type return) 
@@ -319,13 +303,14 @@ rm new_module.egg
     Your identification has been saved in ~/.ssh/id_dsa 
     Your public key has been saved in ~/.ssh/id_dsa.pub 
     The key fingerprint is: 
-    Some really long string</code></p>
+    Some really long string
+</code></pre>
 <ul>
-<li>Step 2: Then, paste the content of the local ~/.ssh/id_dsa.pub file into the file ~/.ssh/authorized_keys on the remote host.
+<li>Step 2: Then, paste the content of the local <code>~/.ssh/id_dsa.pub</code> file into the file <code>~/.ssh/authorized_keys</code> on the remote host.
 RSA instead of DSA<ul>
-<li>If you want something strong, you could try </li>
-<li>% ssh-keygen -t rsa -b 4096</li>
-<li>Instead of the names id_dsa and id_dsa.pub, it will be id_rsa and id_rsa.pub , etc.</li>
+<li>If you want something strong, you could try 
+<code>$ ssh-keygen -t rsa -b 4096</code></li>
+<li>Instead of the names <code>id_dsa and id_dsa.pub</code>, it will be <code>id_rsa and id_rsa.pub</code> , etc.</li>
 <li>The rest of the steps are identical.</li>
 </ul>
 </li>
@@ -334,14 +319,13 @@ RSA instead of DSA<ul>
 </ul>
 <h3 id="screen">screen</h3>
 <ul>
-<li>list all screen sessions</li>
 <li>start screen</li>
 </ul>
-<pre><code>screen -ls
-screen
-screen -S Name
-screen -r
-screen -r Name
+<pre><code>screen -ls      # list all screen sessions
+screen          # start screen
+screen -S Name  # start screen and give it a name
+screen -r       # resume last screen
+screen -r Name  # resume screen with a name
 </code></pre>
 
 <ul>

@@ -22,12 +22,6 @@
     
         
     <url>
-     <loc>None/tackles/Fortran/</loc>
-     <lastmod>2016-06-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>None/tackles/Fortran_on_Ubuntu/</loc>
      <lastmod>2016-06-03</lastmod>
      <changefreq>daily</changefreq>
@@ -57,18 +51,18 @@
      <changefreq>daily</changefreq>
     </url>
         
-    <url>
-     <loc>None/tackles/python_notes/</loc>
-     <lastmod>2016-06-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
         
     <url>
      <loc>None/work/DG_note/</loc>
+     <lastmod>2016-06-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/work/python_notes/</loc>
      <lastmod>2016-06-03</lastmod>
      <changefreq>daily</changefreq>
     </url>

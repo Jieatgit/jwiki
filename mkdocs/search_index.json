@@ -2,18 +2,13 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to Jie's wiki\n\n\nContents:\n\n\n\n\nLinux / Mac notes", 
+            "text": "Welcome to Jie's wiki\n\n\nThis is a personal wiki that is used to keep notes.", 
             "title": "Home"
         }, 
         {
             "location": "/#welcome-to-jies-wiki", 
-            "text": "", 
+            "text": "This is a personal wiki that is used to keep notes.", 
             "title": "Welcome to Jie's wiki"
-        }, 
-        {
-            "location": "/#contents", 
-            "text": "Linux / Mac notes", 
-            "title": "Contents:"
         }, 
         {
             "location": "/fun/fun_places_to_go/", 
@@ -56,19 +51,39 @@
             "title": "Vancouver"
         }, 
         {
-            "location": "/tackles/Fortran/", 
-            "text": "Some notes for Fortran:\n\n\ncompile codes: \ngfortran hello.f\ngfortran hello.f -o hello.out\n\n\nrun codes:\n./a.out\n./hello.out\n\n\nVim notes:\n1. remove red Tab highline:\n:hi link fortranTab NONE\n:hi link fortranTab ERROR\n\n\n\n\n\n\n\n\nServer\nssh chen1430@ueler.math.purdue.edu\nscp local_file chen1430@...edu:dir/\n\n\ngit config --global core.excludesfile ~/.gitignore", 
-            "title": "Fortran"
-        }, 
-        {
             "location": "/tackles/Fortran_on_Ubuntu/", 
-            "text": "install intel Fortan on Ubuntu 12.10\n\n\n\n\n\n\nPrerequisite : \n\n\n\n\n\n\nsee \nthis link\n\n\nmv /bin/sh /bin/sh.orig\nln -s /bin/bash /bin/sh\n\n\n\n\n\n\n\nUbuntu 11.04 through Ubuntu 12.10  :\n\n\n\n\nComposer XE  (aka version compiler versions 12.x and 13.x) prerequisites for Ubuntu Desktop, assuming that gcc and g++ are installed already:\napt-get install build-essential\napt-get install gcc-multilib\napt-get install rpm\napt-get install ia32-libs  #only needed if you install the 32bit compiler\napt-get install openjdk-6-jre-headless\n\n\n\n\n\n\n\n\n\n\n\nDownload Fortran compiler intel. An email address is required.  \nDownload link\n\n\n\n\n\n\nInstall: \n\n\n\n\n\n\nlocate the download tar file\n\n\ntar -xvzf l_fcomposer.tgz\ncd l_fcomposer\nsudo ./install.sh\n\n\n\n\n\n\n\nFollow the installation instructions:\n\n\n\n\nchoose Option 1 to install Intel Fortran, \n\n\nchoose Option 1 to proceed with a serial number.\n\n\ntype in the serial number (case-sensitive) given in the email. (XXXX-XXXXXXXX). Choose 1 for a default install.\n\n\nPress Enter to read the license agreement. The spacebar speeds through this quickly. Type 'accept' to accept the license agreement. \n\n\nAt some point the installation may stop to ask for some 'optional' packages to be installed. Skip this warning.\n\n\n\n\n\n\nConfig system: \n\n\n\n\nAfter the installation is finished go to the terminal and:\n\n\ncd ~\nnano .bashrc\n\n\n\n\n\n\n\ngo to the end of this file and add the following lines:\n\n\nPATH=\"/opt/intel/Compiler/.../bin/intel64:$PATH\"\nexport PATH\nLD_LIBRARY_PATH=\"/opt/intel/Compiler/.../lib/intel64:$LD_LIBRARY_PATH\"\nexport LD_LIBRARY_PATH\n\n\n\n\n\n\n\nEnter the right path in the lines above. Exit the file by saving the changes. \n\n\n\n\n\n\nlet the system read the updated paths by the command:\n\n\nsource .bashrc\n\n\n\n\n\n\n\nThe installation is finished.\n\n\n\n\n\n\nTest: \n\n\n\n\n\n\nwrite simple file as hello.f containing\n\n\nprogram hello\nprint *,'Hello World!'\nend program\n\n\n\n\n\n\n\nCompile and run your code by the command:\n\n\nifort hello.f\n./a.out", 
+            "text": "Install intel Fortan on Ubuntu 12.10\n\n\nPrerequisite\n\n\n\n\n\n\nsee \nthis link\n\n\nmv /bin/sh /bin/sh.orig\nln -s /bin/bash /bin/sh\n\n\n\n\n\n\n\nUbuntu 11.04 through Ubuntu 12.10  :\n\n\n\n\nComposer XE  (aka version compiler versions 12.x and 13.x) prerequisites for Ubuntu Desktop, assuming that gcc and g++ are installed already:\napt-get install build-essential\napt-get install gcc-multilib\napt-get install rpm\napt-get install ia32-libs  #only needed if you install the 32bit compiler\napt-get install openjdk-6-jre-headless\n\n\n\n\n\n\n\nDownload\n\n\n\n\nDownload Fortran compiler intel. An email address is required.  \nDownload link\n\n\n\n\nInstall\n\n\n\n\n\n\nlocate the download tar file\n\n\ntar -xvzf l_fcomposer.tgz\ncd l_fcomposer\nsudo ./install.sh\n\n\n\n\n\n\n\nFollow the installation instructions:\n\n\n\n\nchoose Option 1 to install Intel Fortran, \n\n\nchoose Option 1 to proceed with a serial number.\n\n\ntype in the serial number (case-sensitive) given in the email. (XXXX-XXXXXXXX). Choose 1 for a default install.\n\n\nPress Enter to read the license agreement. The spacebar speeds through this quickly. Type 'accept' to accept the license agreement. \n\n\nAt some point the installation may stop to ask for some 'optional' packages to be installed. Skip this warning.\n\n\n\n\n\n\n\n\nConfig system\n\n\n\n\n\n\nAfter the installation is finished go to the terminal and:\n\n\ncd ~\nnano .bashrc\n\n\n\n\n\n\n\ngo to the end of this file and add the following lines:\n\n\nPATH=\"/opt/intel/Compiler/.../bin/intel64:$PATH\"\nexport PATH\nLD_LIBRARY_PATH=\"/opt/intel/Compiler/.../lib/intel64:$LD_LIBRARY_PATH\"\nexport LD_LIBRARY_PATH\n\n\n\n\n\n\n\nEnter the right path in the lines above. Exit the file by saving the changes. \n\n\n\n\n\n\nlet the system read the updated paths by the command:\n\n\nsource .bashrc\n\n\n\n\n\n\n\nThe installation is finished.\n\n\nTest\n\n\n\n\n\n\nwrite simple file as hello.f containing\n\n\nprogram hello\nprint *,'Hello World!'\nend program\n\n\n\n\n\n\n\nCompile and run your code by the command:\n\n\nifort hello.f\n./a.out", 
             "title": "Fortran on Ubuntu"
         }, 
         {
             "location": "/tackles/Fortran_on_Ubuntu/#install-intel-fortan-on-ubuntu-1210", 
-            "text": "Prerequisite :     see  this link  mv /bin/sh /bin/sh.orig\nln -s /bin/bash /bin/sh    Ubuntu 11.04 through Ubuntu 12.10  :   Composer XE  (aka version compiler versions 12.x and 13.x) prerequisites for Ubuntu Desktop, assuming that gcc and g++ are installed already: apt-get install build-essential\napt-get install gcc-multilib\napt-get install rpm\napt-get install ia32-libs  #only needed if you install the 32bit compiler\napt-get install openjdk-6-jre-headless      Download Fortran compiler intel. An email address is required.   Download link    Install:     locate the download tar file  tar -xvzf l_fcomposer.tgz\ncd l_fcomposer\nsudo ./install.sh    Follow the installation instructions:   choose Option 1 to install Intel Fortran,   choose Option 1 to proceed with a serial number.  type in the serial number (case-sensitive) given in the email. (XXXX-XXXXXXXX). Choose 1 for a default install.  Press Enter to read the license agreement. The spacebar speeds through this quickly. Type 'accept' to accept the license agreement.   At some point the installation may stop to ask for some 'optional' packages to be installed. Skip this warning.    Config system:    After the installation is finished go to the terminal and:  cd ~\nnano .bashrc    go to the end of this file and add the following lines:  PATH=\"/opt/intel/Compiler/.../bin/intel64:$PATH\"\nexport PATH\nLD_LIBRARY_PATH=\"/opt/intel/Compiler/.../lib/intel64:$LD_LIBRARY_PATH\"\nexport LD_LIBRARY_PATH    Enter the right path in the lines above. Exit the file by saving the changes.     let the system read the updated paths by the command:  source .bashrc    The installation is finished.    Test:     write simple file as hello.f containing  program hello\nprint *,'Hello World!'\nend program    Compile and run your code by the command:  ifort hello.f\n./a.out", 
-            "title": "install intel Fortan on Ubuntu 12.10"
+            "text": "", 
+            "title": "Install intel Fortan on Ubuntu 12.10"
+        }, 
+        {
+            "location": "/tackles/Fortran_on_Ubuntu/#prerequisite", 
+            "text": "see  this link  mv /bin/sh /bin/sh.orig\nln -s /bin/bash /bin/sh    Ubuntu 11.04 through Ubuntu 12.10  :   Composer XE  (aka version compiler versions 12.x and 13.x) prerequisites for Ubuntu Desktop, assuming that gcc and g++ are installed already: apt-get install build-essential\napt-get install gcc-multilib\napt-get install rpm\napt-get install ia32-libs  #only needed if you install the 32bit compiler\napt-get install openjdk-6-jre-headless", 
+            "title": "Prerequisite"
+        }, 
+        {
+            "location": "/tackles/Fortran_on_Ubuntu/#download", 
+            "text": "Download Fortran compiler intel. An email address is required.   Download link", 
+            "title": "Download"
+        }, 
+        {
+            "location": "/tackles/Fortran_on_Ubuntu/#install", 
+            "text": "locate the download tar file  tar -xvzf l_fcomposer.tgz\ncd l_fcomposer\nsudo ./install.sh    Follow the installation instructions:   choose Option 1 to install Intel Fortran,   choose Option 1 to proceed with a serial number.  type in the serial number (case-sensitive) given in the email. (XXXX-XXXXXXXX). Choose 1 for a default install.  Press Enter to read the license agreement. The spacebar speeds through this quickly. Type 'accept' to accept the license agreement.   At some point the installation may stop to ask for some 'optional' packages to be installed. Skip this warning.", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/tackles/Fortran_on_Ubuntu/#config-system", 
+            "text": "After the installation is finished go to the terminal and:  cd ~\nnano .bashrc    go to the end of this file and add the following lines:  PATH=\"/opt/intel/Compiler/.../bin/intel64:$PATH\"\nexport PATH\nLD_LIBRARY_PATH=\"/opt/intel/Compiler/.../lib/intel64:$LD_LIBRARY_PATH\"\nexport LD_LIBRARY_PATH    Enter the right path in the lines above. Exit the file by saving the changes.     let the system read the updated paths by the command:  source .bashrc    The installation is finished.", 
+            "title": "Config system"
+        }, 
+        {
+            "location": "/tackles/Fortran_on_Ubuntu/#test", 
+            "text": "write simple file as hello.f containing  program hello\nprint *,'Hello World!'\nend program    Compile and run your code by the command:  ifort hello.f\n./a.out", 
+            "title": "Test"
         }, 
         {
             "location": "/tackles/github_host/", 
@@ -92,57 +107,52 @@
         }, 
         {
             "location": "/tackles/mac_commands/", 
-            "text": "(1)\n\n\n\n\n\n\nunpack .tar.gz files  \n\n\n\n\n\n\n\n\n- $ gunzip -c foo.tar.gz\n\n\ntar xopf -\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nunpack .tar files   \n\n$ tar xopf foo.tar\n\n$ tar xopft foo.tar\n\n\n\n\n\n\nunpack .zip files \n$ unzip -a foo.zip\n\n\n\n\n\n\npack .zip files \n\n$ zip -r y.zip y.pdf\n\n\n\n\n\n\n(2)\n\n\ndisk usage\n\n\n\n\n$ du -h\n\n\n$ du -sh\n\n\n$ du -sh *\n\n\n$ du -sh dir_path\n\n\n$ du -a\n\n\n$ du -c # total contral\n\n\n\n\n$ du -sh #show total usage in the dir\n\n\n\n\n\n\n$ df -h\n\n\n\n\n\n\n(3) 4.25.2014\n\n\n\n\nvim-latex is install in ~/.vim\n\n\nto configure vim only for latex:\n\n\nedit file ~/.vim/ftplugin/tex_latexSuite.vim\n\n\n\n\n(4) conte.rcac.purdue.edu cluster:\n\n\n\n\n$ module avail  # shows all available modules\n\n\n$ module load   # load module, for example:\n\n\n$ module load matlab/R2013a\n\n\n\n\n(5) virtualbox\n\n\n\n\nID/pw ubuntu/chenjie\n\n\n\n\nchange ubuntu password:\n\n\n\n\nreboot while hold shift\n\n\nLet your virtual Machine to capture your mouse.\n\n\nHold the shift key down to get the grub menu.\n\n\nSelect the recovery mode option.\n\n\nSelect drop to root shell prompt.\n\n\ntype command: mount -rw -o remount /\n\n\nNow, change with # passwd [username] (You can also see the list of users using # nano /etc/passwd).\n\n\n\n\n\n\n\n\nmount shared folder:\n\n\n\n\nadd shared folder in virtualBox\n\n\ntype command in ubuntu: \n\n$ sudo mount -t vboxsf -o uid=1000,gid=1000 share /home/\n/vboxshare\n\n\n\n\n\n\n\n\n(6) grip\n\n\nhttps://github.com/joeyespo/grip\nuse grip to convert md file to html file from command line\n\n\ngrip \ngrip foo.md\ngrip foo.md --export foo.html\n\n\n\n\n(7) Sypder-py2\n\n\nadd a new module to Syper\n\n\n$python\n\nimport talib\n\ntalib  # copy the module location\n\neixt()\n\n\n\n\nIf it is a .egg file\n\n\n$cp new_module.egg /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7/\nunzip new_module.egg\nrm new_module.egg\n\n\n\n\nif it is a folder\n\n\n$cp -r new_module_folder /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7\n\n\n\n\n(8) Setting up SSH public/private keys\n\n\nSSH (Secure Shell) can be set up with public/private key pairs so that you do not have to type the password each time. Because SSH is the transport for other services such as SCP (secure copy), SFTP (secure file transfer), and other services (CVS, etc), this can be very convenient and save you a lot of typing.\n\n\nSSH Version 2\n\n\nOn the local machine, type the BOLD part. The non-bold part is what you might see as output or prompt.\n\n\n\n\n\n\nStep 1: \n\n\n% ssh-keygen -t dsa \n    Generating public/private dsa key pair. \n    Enter file in which to save the key (~/.ssh/id_dsa): (just type return) \n    Enter passphrase (empty for no passphrase): (just type return) \n    Enter same passphrase again: (just type return) \n    Your identification has been saved in ~/.ssh/id_dsa \n    Your public key has been saved in ~/.ssh/id_dsa.pub \n    The key fingerprint is: \n    Some really long string\n\n\n\n\nStep 2: Then, paste the content of the local ~/.ssh/id_dsa.pub file into the file ~/.ssh/authorized_keys on the remote host.\nRSA instead of DSA\n\n\nIf you want something strong, you could try \n\n\n% ssh-keygen -t rsa -b 4096\n\n\nInstead of the names id_dsa and id_dsa.pub, it will be id_rsa and id_rsa.pub , etc.\n\n\nThe rest of the steps are identical.\n\n\n\n\n\n\n\n\n\n\n\n\nscreen\n\n\n\n\nlist all screen sessions\n\n\nstart screen\n\n\n\n\nscreen -ls\nscreen\nscreen -S Name\nscreen -r\nscreen -r Name\n\n\n\n\n\n\nexit\n\n\n\n\nexit\nC-a d\nC-a D D\nC-a \\", 
+            "text": "Compress files\n\n\n\n\n\n\nunpack .tar.gz files  \n\n\n$ gunzip -c foo.tar.gz | tar xopf - \n$ gunzip -c foo.tar.gz | tar xopft -\n\n\n\n\n\n\n\nunpack .tar files     \n\n\n$ tar xopf foo.tar  \n$ tar xopft foo.tar\n\n\n\n\n\n\n\nunpack .zip files \n\n\n$ unzip -a foo.zip\n\n\n\n\n\n\n\npack .zip files   \n\n\n$ zip -r y.zip y.pdf\n\n\n\n\n\n\n\nDisk usage\n\n\n$ du -h\n$ du -sh\n$ du -sh *\n$ du -sh dir_path\n$ du -a\n$ du -c # total contral\n$ du -sh #show total usage in the dir\n\n$ df -h\n\n\n\n\nvim-latex\n\n\n\n\nvim-latex is install in ~/.vim\n\n\nto configure vim only for latex:\n\n\nedit file ~/.vim/ftplugin/tex_latexSuite.vim\n\n\n\n\nPurdue server\n\n\nconte.rcac.purdue.edu cluster:\n\n\n$ module avail  # shows all available modules\n$ module load   # load module, for example:\n$ module load matlab/R2013a\n\n\n\n\nvirtualbox\n\n\n\n\nID/pw ubuntu/chenjie\n\n\n\n\nchange ubuntu password:\n\n\n\n\nreboot while hold shift\n\n\nLet your virtual Machine to capture your mouse.\n\n\nHold the shift key down to get the grub menu.\n\n\nSelect the recovery mode option.\n\n\nSelect drop to root shell prompt.\n\n\ntype command: mount -rw -o remount /\n\n\nNow, change with # passwd [username] (You can also see the list of users using # nano /etc/passwd).\n\n\n\n\n\n\n\n\nmount shared folder:\n\n\n\n\nadd shared folder in virtualBox\n\n\ntype command in ubuntu: \n\n\n$ sudo mount -t vboxsf -o uid=1000,gid=1000 share /home/\nuser\n/vboxshare\n\n\n\n\n\n\n\n\ngrip\n\n\nuse grip to convert md file to html file from command line. see \nthis link\n\n\ngrip \ngrip foo.md\ngrip foo.md --export foo.html\n\n\n\n\nSypder-py2\n\n\nadd a new module to Syper\n\n\n$python\n\nimport talib\n\ntalib  # copy the module location\n\neixt()\n\n\n\n\nIf it is a .egg file\n\n\n$cp new_module.egg /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7/\nunzip new_module.egg\nrm new_module.egg\n\n\n\n\nif it is a folder\n\n\n$cp -r new_module_folder /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7\n\n\n\n\nSSH public/private keys\n\n\nSSH (Secure Shell) can be set up with public/private key pairs so that you do not have to type the password each time. Because SSH is the transport for other services such as SCP (secure copy), SFTP (secure file transfer), and other services (CVS, etc), this can be very convenient and save you a lot of typing.\n\n\nOn the local machine, type the BOLD part. The non-bold part is what you might see as output or prompt.\n\n\n\n\n\n\nStep 1: \n\n\n$ ssh-keygen -t dsa \n    Generating public/private dsa key pair. \n    Enter file in which to save the key (~/.ssh/id_dsa): (just type return) \n    Enter passphrase (empty for no passphrase): (just type return) \n    Enter same passphrase again: (just type return) \n    Your identification has been saved in ~/.ssh/id_dsa \n    Your public key has been saved in ~/.ssh/id_dsa.pub \n    The key fingerprint is: \n    Some really long string\n\n\n\n\n\nStep 2: Then, paste the content of the local \n~/.ssh/id_dsa.pub\n file into the file \n~/.ssh/authorized_keys\n on the remote host.\nRSA instead of DSA\n\n\nIf you want something strong, you could try \n\n$ ssh-keygen -t rsa -b 4096\n\n\nInstead of the names \nid_dsa and id_dsa.pub\n, it will be \nid_rsa and id_rsa.pub\n , etc.\n\n\nThe rest of the steps are identical.\n\n\n\n\n\n\n\n\n\n\n\n\nscreen\n\n\n\n\nstart screen\n\n\n\n\nscreen -ls      # list all screen sessions\nscreen          # start screen\nscreen -S Name  # start screen and give it a name\nscreen -r       # resume last screen\nscreen -r Name  # resume screen with a name\n\n\n\n\n\n\nexit\n\n\n\n\nexit\nC-a d\nC-a D D\nC-a \\", 
             "title": "Mac commands"
         }, 
         {
-            "location": "/tackles/mac_commands/#1", 
-            "text": "unpack .tar.gz files       - $ gunzip -c foo.tar.gz  tar xopf -        unpack .tar files    \n$ tar xopf foo.tar \n$ tar xopft foo.tar    unpack .zip files \n$ unzip -a foo.zip    pack .zip files  \n$ zip -r y.zip y.pdf", 
-            "title": "(1)"
+            "location": "/tackles/mac_commands/#compress-files", 
+            "text": "unpack .tar.gz files    $ gunzip -c foo.tar.gz | tar xopf - \n$ gunzip -c foo.tar.gz | tar xopft -    unpack .tar files       $ tar xopf foo.tar  \n$ tar xopft foo.tar    unpack .zip files   $ unzip -a foo.zip    pack .zip files     $ zip -r y.zip y.pdf", 
+            "title": "Compress files"
         }, 
         {
-            "location": "/tackles/mac_commands/#2", 
-            "text": "disk usage   $ du -h  $ du -sh  $ du -sh *  $ du -sh dir_path  $ du -a  $ du -c # total contral   $ du -sh #show total usage in the dir    $ df -h", 
-            "title": "(2)"
+            "location": "/tackles/mac_commands/#disk-usage", 
+            "text": "$ du -h\n$ du -sh\n$ du -sh *\n$ du -sh dir_path\n$ du -a\n$ du -c # total contral\n$ du -sh #show total usage in the dir\n\n$ df -h", 
+            "title": "Disk usage"
         }, 
         {
-            "location": "/tackles/mac_commands/#3-4252014", 
+            "location": "/tackles/mac_commands/#vim-latex", 
             "text": "vim-latex is install in ~/.vim  to configure vim only for latex:  edit file ~/.vim/ftplugin/tex_latexSuite.vim", 
-            "title": "(3) 4.25.2014"
+            "title": "vim-latex"
         }, 
         {
-            "location": "/tackles/mac_commands/#4-contercacpurdueedu-cluster", 
-            "text": "$ module avail  # shows all available modules  $ module load   # load module, for example:  $ module load matlab/R2013a", 
-            "title": "(4) conte.rcac.purdue.edu cluster:"
+            "location": "/tackles/mac_commands/#purdue-server", 
+            "text": "conte.rcac.purdue.edu cluster:  $ module avail  # shows all available modules\n$ module load   # load module, for example:\n$ module load matlab/R2013a", 
+            "title": "Purdue server"
         }, 
         {
-            "location": "/tackles/mac_commands/#5-virtualbox", 
-            "text": "ID/pw ubuntu/chenjie   change ubuntu password:   reboot while hold shift  Let your virtual Machine to capture your mouse.  Hold the shift key down to get the grub menu.  Select the recovery mode option.  Select drop to root shell prompt.  type command: mount -rw -o remount /  Now, change with # passwd [username] (You can also see the list of users using # nano /etc/passwd).     mount shared folder:   add shared folder in virtualBox  type command in ubuntu:  \n$ sudo mount -t vboxsf -o uid=1000,gid=1000 share /home/ /vboxshare", 
-            "title": "(5) virtualbox"
+            "location": "/tackles/mac_commands/#virtualbox", 
+            "text": "ID/pw ubuntu/chenjie   change ubuntu password:   reboot while hold shift  Let your virtual Machine to capture your mouse.  Hold the shift key down to get the grub menu.  Select the recovery mode option.  Select drop to root shell prompt.  type command: mount -rw -o remount /  Now, change with # passwd [username] (You can also see the list of users using # nano /etc/passwd).     mount shared folder:   add shared folder in virtualBox  type command in ubuntu:   $ sudo mount -t vboxsf -o uid=1000,gid=1000 share /home/ user /vboxshare", 
+            "title": "virtualbox"
         }, 
         {
-            "location": "/tackles/mac_commands/#6-grip", 
-            "text": "https://github.com/joeyespo/grip\nuse grip to convert md file to html file from command line  grip \ngrip foo.md\ngrip foo.md --export foo.html", 
-            "title": "(6) grip"
+            "location": "/tackles/mac_commands/#grip", 
+            "text": "use grip to convert md file to html file from command line. see  this link  grip \ngrip foo.md\ngrip foo.md --export foo.html", 
+            "title": "grip"
         }, 
         {
-            "location": "/tackles/mac_commands/#7-sypder-py2", 
+            "location": "/tackles/mac_commands/#sypder-py2", 
             "text": "add a new module to Syper  $python import talib talib  # copy the module location eixt()  If it is a .egg file  $cp new_module.egg /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7/\nunzip new_module.egg\nrm new_module.egg  if it is a folder  $cp -r new_module_folder /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7", 
-            "title": "(7) Sypder-py2"
+            "title": "Sypder-py2"
         }, 
         {
-            "location": "/tackles/mac_commands/#8-setting-up-ssh-publicprivate-keys", 
-            "text": "SSH (Secure Shell) can be set up with public/private key pairs so that you do not have to type the password each time. Because SSH is the transport for other services such as SCP (secure copy), SFTP (secure file transfer), and other services (CVS, etc), this can be very convenient and save you a lot of typing.", 
-            "title": "(8) Setting up SSH public/private keys"
-        }, 
-        {
-            "location": "/tackles/mac_commands/#ssh-version-2", 
-            "text": "On the local machine, type the BOLD part. The non-bold part is what you might see as output or prompt.    Step 1:   % ssh-keygen -t dsa \n    Generating public/private dsa key pair. \n    Enter file in which to save the key (~/.ssh/id_dsa): (just type return) \n    Enter passphrase (empty for no passphrase): (just type return) \n    Enter same passphrase again: (just type return) \n    Your identification has been saved in ~/.ssh/id_dsa \n    Your public key has been saved in ~/.ssh/id_dsa.pub \n    The key fingerprint is: \n    Some really long string   Step 2: Then, paste the content of the local ~/.ssh/id_dsa.pub file into the file ~/.ssh/authorized_keys on the remote host.\nRSA instead of DSA  If you want something strong, you could try   % ssh-keygen -t rsa -b 4096  Instead of the names id_dsa and id_dsa.pub, it will be id_rsa and id_rsa.pub , etc.  The rest of the steps are identical.", 
-            "title": "SSH Version 2"
+            "location": "/tackles/mac_commands/#ssh-publicprivate-keys", 
+            "text": "SSH (Secure Shell) can be set up with public/private key pairs so that you do not have to type the password each time. Because SSH is the transport for other services such as SCP (secure copy), SFTP (secure file transfer), and other services (CVS, etc), this can be very convenient and save you a lot of typing.  On the local machine, type the BOLD part. The non-bold part is what you might see as output or prompt.    Step 1:   $ ssh-keygen -t dsa \n    Generating public/private dsa key pair. \n    Enter file in which to save the key (~/.ssh/id_dsa): (just type return) \n    Enter passphrase (empty for no passphrase): (just type return) \n    Enter same passphrase again: (just type return) \n    Your identification has been saved in ~/.ssh/id_dsa \n    Your public key has been saved in ~/.ssh/id_dsa.pub \n    The key fingerprint is: \n    Some really long string   Step 2: Then, paste the content of the local  ~/.ssh/id_dsa.pub  file into the file  ~/.ssh/authorized_keys  on the remote host.\nRSA instead of DSA  If you want something strong, you could try  $ ssh-keygen -t rsa -b 4096  Instead of the names  id_dsa and id_dsa.pub , it will be  id_rsa and id_rsa.pub  , etc.  The rest of the steps are identical.", 
+            "title": "SSH public/private keys"
         }, 
         {
             "location": "/tackles/mac_commands/#screen", 
-            "text": "list all screen sessions  start screen   screen -ls\nscreen\nscreen -S Name\nscreen -r\nscreen -r Name   exit   exit\nC-a d\nC-a D D\nC-a \\", 
+            "text": "start screen   screen -ls      # list all screen sessions\nscreen          # start screen\nscreen -S Name  # start screen and give it a name\nscreen -r       # resume last screen\nscreen -r Name  # resume screen with a name   exit   exit\nC-a d\nC-a D D\nC-a \\", 
             "title": "screen"
         }, 
         {
@@ -252,43 +262,28 @@
         }, 
         {
             "location": "/tackles/mkdocs/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    #\u00a0The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nresources\n\n\nmkdocs \nthemes", 
+            "text": "MkDocs\n\n\nMkdocs converts a list of markdown files into a well orgnized website. This site is an example of the output of mkdocs.\n\n\nFor full documentation, visit \nmkdocs.org\n.\n\n\nBasics\n\n\n$ mkdocs new [dir-name]    # Create a new project.\n$ cd [dir-name]\n$ mkdocs build             # Build the documentation site.\n$ mkdocs serve             # Start the live-reloading docs server.\n$ mkdocs help              # Print this help message.\n\n\n\n\nFile layout\n\n\nmkdocs.yml    #\u00a0The configuration file, edit site title, theme, etc.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\nstie/\n    ...       # site generated by mkdocs\n\n\n\nResources\n\n\nmkdocs \nthemes", 
             "title": "Mkdocs"
         }, 
         {
-            "location": "/tackles/mkdocs/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/tackles/mkdocs/#mkdocs", 
+            "text": "Mkdocs converts a list of markdown files into a well orgnized website. This site is an example of the output of mkdocs.  For full documentation, visit  mkdocs.org .", 
+            "title": "MkDocs"
         }, 
         {
-            "location": "/tackles/mkdocs/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/tackles/mkdocs/#basics", 
+            "text": "$ mkdocs new [dir-name]    # Create a new project.\n$ cd [dir-name]\n$ mkdocs build             # Build the documentation site.\n$ mkdocs serve             # Start the live-reloading docs server.\n$ mkdocs help              # Print this help message.", 
+            "title": "Basics"
         }, 
         {
-            "location": "/tackles/mkdocs/#project-layout", 
-            "text": "mkdocs.yml    #\u00a0The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/tackles/mkdocs/#file-layout", 
+            "text": "mkdocs.yml    #\u00a0The configuration file, edit site title, theme, etc.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\nstie/\n    ...       # site generated by mkdocs", 
+            "title": "File layout"
         }, 
         {
             "location": "/tackles/mkdocs/#resources", 
             "text": "mkdocs  themes", 
-            "title": "resources"
-        }, 
-        {
-            "location": "/tackles/python_notes/", 
-            "text": "Python notes\n\n\n\n\nPackages\n\n\nSee [package list]\n/Users/Jie/Dropbox/work/Study/python/useful_libraries_for_data_science_in_python.md\n for more\n\n\n\n\nFundamental Libraries for Scientific Computing\n\n\nIPython Notebook\n\n\nNumPy\n\n\npandas\n\n\nSciPy\n\n\n\n\n\n\nMath and Statistics\n\n\nSymPy\n\n\nStatsmodels\n\n\n\n\n\n\nMachine Learning\n\n\nScikit-learn\n\n\nShogun\n\n\nPyBrain\n\n\nPyLearn2\n\n\nPyMC\n\n\n\n\n\n\nPlotting and Visualization\n\n\nBokeh\n\n\nd3py\n\n\nggplot\n\n\nmatplotlib\n\n\nplotly\n\n\nprettyplotlib\n\n\nseaborn\n\n\n\n\n\n\nData formatting and storage\n\n\ncsvkit\n\n\nPyTables\n\n\nsqlite3", 
-            "title": "Python notes"
-        }, 
-        {
-            "location": "/tackles/python_notes/#python-notes", 
-            "text": "", 
-            "title": "Python notes"
-        }, 
-        {
-            "location": "/tackles/python_notes/#packages", 
-            "text": "See [package list] /Users/Jie/Dropbox/work/Study/python/useful_libraries_for_data_science_in_python.md  for more   Fundamental Libraries for Scientific Computing  IPython Notebook  NumPy  pandas  SciPy    Math and Statistics  SymPy  Statsmodels    Machine Learning  Scikit-learn  Shogun  PyBrain  PyLearn2  PyMC    Plotting and Visualization  Bokeh  d3py  ggplot  matplotlib  plotly  prettyplotlib  seaborn    Data formatting and storage  csvkit  PyTables  sqlite3", 
-            "title": "Packages"
+            "title": "Resources"
         }, 
         {
             "location": "/work/DG_note/", 
@@ -299,6 +294,21 @@
             "location": "/work/DG_note/#notes-to-run-time_domain_dg", 
             "text": "ssh to conte  cd Time_domain_DG/RKDG/input\nqsub simu_qsub  run code interactively  -q gmig -l nodes=1:ppn=16,walltime=4:00:00  useful commends  qstat\nqstat -u  chen1430 \nqdel", 
             "title": "notes to run Time_domain_DG"
+        }, 
+        {
+            "location": "/work/python_notes/", 
+            "text": "Python notes\n\n\n\n\nPackages\n\n\nSee [package list]\n/Users/Jie/Dropbox/work/Study/python/useful_libraries_for_data_science_in_python.md\n for more\n\n\n\n\nFundamental Libraries for Scientific Computing\n\n\nIPython Notebook\n\n\nNumPy\n\n\npandas\n\n\nSciPy\n\n\n\n\n\n\nMath and Statistics\n\n\nSymPy\n\n\nStatsmodels\n\n\n\n\n\n\nMachine Learning\n\n\nScikit-learn\n\n\nShogun\n\n\nPyBrain\n\n\nPyLearn2\n\n\nPyMC\n\n\n\n\n\n\nPlotting and Visualization\n\n\nBokeh\n\n\nd3py\n\n\nggplot\n\n\nmatplotlib\n\n\nplotly\n\n\nprettyplotlib\n\n\nseaborn\n\n\n\n\n\n\nData formatting and storage\n\n\ncsvkit\n\n\nPyTables\n\n\nsqlite3", 
+            "title": "Python notes"
+        }, 
+        {
+            "location": "/work/python_notes/#python-notes", 
+            "text": "", 
+            "title": "Python notes"
+        }, 
+        {
+            "location": "/work/python_notes/#packages", 
+            "text": "See [package list] /Users/Jie/Dropbox/work/Study/python/useful_libraries_for_data_science_in_python.md  for more   Fundamental Libraries for Scientific Computing  IPython Notebook  NumPy  pandas  SciPy    Math and Statistics  SymPy  Statsmodels    Machine Learning  Scikit-learn  Shogun  PyBrain  PyLearn2  PyMC    Plotting and Visualization  Bokeh  d3py  ggplot  matplotlib  plotly  prettyplotlib  seaborn    Data formatting and storage  csvkit  PyTables  sqlite3", 
+            "title": "Packages"
         }
     ]
 }
