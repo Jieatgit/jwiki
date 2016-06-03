@@ -22,12 +22,12 @@
         }, 
         {
             "location": "/tackles/github_host/", 
-            "text": "how to use github to host a simple website?\n\n\nfor detail refer to \nthis site\n\n\nbrief steps: first create a repo on github \n\n\n\"\"\"\ncd site_dir\ngit init\ngit remote add origin https://github.com/***\ngit checkout --orphan gh-pages\ngit add .\ngit commit -m \"adding pages\"\ngit push origin gh-pages\n\"\"\"\n\n\ndone! http://username.github.io/repository/.", 
+            "text": "how to use github to host a simple website?\n\n\nfor detail refer to \nthis site\n\n\nbrief steps: first create a repo on github \n\n\ncd site_dir\ngit init\ngit remote add origin https://github.com/***\ngit checkout --orphan gh-pages\ngit add .\ngit commit -m \nadding pages\n\ngit push origin gh-pages\n\n\n\n\ndone! http://username.github.io/repository/.", 
             "title": "Github host"
         }, 
         {
             "location": "/tackles/github_host/#how-to-use-github-to-host-a-simple-website", 
-            "text": "for detail refer to  this site  brief steps: first create a repo on github   \"\"\"\ncd site_dir\ngit init\ngit remote add origin https://github.com/***\ngit checkout --orphan gh-pages\ngit add .\ngit commit -m \"adding pages\"\ngit push origin gh-pages\n\"\"\"  done! http://username.github.io/repository/.", 
+            "text": "for detail refer to  this site  brief steps: first create a repo on github   cd site_dir\ngit init\ngit remote add origin https://github.com/***\ngit checkout --orphan gh-pages\ngit add .\ngit commit -m  adding pages \ngit push origin gh-pages  done! http://username.github.io/repository/.", 
             "title": "how to use github to host a simple website?"
         }, 
         {
