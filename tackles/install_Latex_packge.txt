@@ -1,0 +1,9 @@
+
+Normally, you can find the '.sty' file in google and download it. But if not, you can download it from CTAN's website in a zipped file, as 'fullpage.tar.gz'. You can unzip it to generate the '.sty' file by commands:
+
+1. tar xvf fullpage.tar.gz
+   latex fullpage.ins
+
+2. sudo mkdir /usr/share/texmf/tex/latex/fullpage
+   sudo cp fullpage.sty /usr/share/texmf/tex/latex/fullpage
+   sudo texhash
