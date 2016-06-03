@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Python notes - Jie's wiki</title>
+	<title>Github host - Jie's wiki</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -67,8 +67,8 @@
 
                     
                         
-<li >
-    <a href="../github_host/">Github host</a>
+<li class="active">
+    <a href="./">Github host</a>
 </li>
 
                     
@@ -91,8 +91,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Python notes</a>
+<li >
+    <a href="../python_notes/">Python notes</a>
 </li>
 
                     
@@ -125,12 +125,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../mkdocs/">
+                    <a rel="next" href="../Fortran/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../work/DG_note/">
+                    <a rel="prev" href="../mac_commands/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -144,59 +144,26 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#python-notes">Python notes</a></li>
-        
-            <li><a href="#packages">Packages</a></li>
+        <li class="main active"><a href="#how-to-use-github-to-host-a-simple-website">how to use github to host a simple website?</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="python-notes">Python notes</h1>
-<p><a class="mk-toclify" id="table-of-contents"></a></p>
-<h3 id="packages">Packages</h3>
-<p>See [package list]<code>/Users/Jie/Dropbox/work/Study/python/useful_libraries_for_data_science_in_python.md</code> for more</p>
-<ul>
-<li><a href="#fundamental-libraries-for-scientific-computing">Fundamental Libraries for Scientific Computing</a><ul>
-<li><a href="#ipython-notebook">IPython Notebook</a></li>
-<li><a href="#numpy">NumPy</a></li>
-<li><a href="#pandas">pandas</a></li>
-<li><a href="#scipy">SciPy</a></li>
-</ul>
-</li>
-<li><a href="#math-and-statistics">Math and Statistics</a><ul>
-<li><a href="#sympy">SymPy</a></li>
-<li><a href="#statsmodels">Statsmodels</a></li>
-</ul>
-</li>
-<li><a href="#machine-learning">Machine Learning</a><ul>
-<li><a href="#scikit-learn">Scikit-learn</a></li>
-<li><a href="#shogun">Shogun</a></li>
-<li><a href="#pybrain">PyBrain</a></li>
-<li><a href="#pylearn2">PyLearn2</a></li>
-<li><a href="#pymc">PyMC</a></li>
-</ul>
-</li>
-<li><a href="#plotting-and-visualization">Plotting and Visualization</a><ul>
-<li><a href="#bokeh">Bokeh</a></li>
-<li><a href="#d3py">d3py</a></li>
-<li><a href="#ggplot">ggplot</a></li>
-<li><a href="#matplotlib">matplotlib</a></li>
-<li><a href="#plotly">plotly</a></li>
-<li><a href="#prettyplotlib">prettyplotlib</a></li>
-<li><a href="#seaborn">seaborn</a></li>
-</ul>
-</li>
-<li><a href="#data-formatting-and-storage">Data formatting and storage</a><ul>
-<li><a href="#csvkit">csvkit</a></li>
-<li><a href="#pytables">PyTables</a></li>
-<li><a href="#sqlite3">sqlite3</a> </li>
-</ul>
-</li>
-</ul>
-<p><br>
-<br></p></div>
+<h1 id="how-to-use-github-to-host-a-simple-website">how to use github to host a simple website?</h1>
+<p>for detail refer to <a href="http://blog.teamtreehouse.com/using-github-pages-to-host-your-website">this site</a></p>
+<p>brief steps: first create a repo on github </p>
+<p>"""
+cd site_dir
+git init
+git remote add origin https://github.com/***
+git checkout --orphan gh-pages
+git add .
+git commit -m "adding pages"
+git push origin gh-pages
+"""</p>
+<p>done! http://username.github.io/repository/.</p></div>
         </div>
 
         <footer class="col-md-12">
