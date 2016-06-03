@@ -22,13 +22,23 @@
         }, 
         {
             "location": "/tackles/github_host/", 
-            "text": "how to use github to host a simple website?\n\n\nfor detail refer to \nthis site\n\n\nbrief steps: first create a repo on github \n\n\ncd site_dir\ngit init\ngit remote add origin https://github.com/***\ngit checkout --orphan gh-pages\ngit add .\ngit commit -m \nadding pages\n\ngit push origin gh-pages\n\n\n\n\ndone! http://username.github.io/repository/.", 
+            "text": "use github to host a simple website\n\n\nhow-to\n\n\nfor detail refer to \nthis site\n\n\nbriefly, first create a repo on github, then in command lines, do\n\n\ncd site_dir\ngit init\ngit remote add origin https://github.com/***\ngit checkout --orphan gh-pages\ngit add .\ngit commit -m \nadding pages\n\ngit push origin gh-pages\n\n\n\n\ndone! http://username.github.io/repository/.\n\n\nupdate jwiki\n\n\ncd my-wiki\nvim doc/file_to_edit.md\nmkdocs build\ncd site\ngit add .\ngit commit -m \nedited file_to_edit\n\ngit push origin gh-pages", 
             "title": "Github host"
         }, 
         {
-            "location": "/tackles/github_host/#how-to-use-github-to-host-a-simple-website", 
-            "text": "for detail refer to  this site  brief steps: first create a repo on github   cd site_dir\ngit init\ngit remote add origin https://github.com/***\ngit checkout --orphan gh-pages\ngit add .\ngit commit -m  adding pages \ngit push origin gh-pages  done! http://username.github.io/repository/.", 
-            "title": "how to use github to host a simple website?"
+            "location": "/tackles/github_host/#use-github-to-host-a-simple-website", 
+            "text": "", 
+            "title": "use github to host a simple website"
+        }, 
+        {
+            "location": "/tackles/github_host/#how-to", 
+            "text": "for detail refer to  this site  briefly, first create a repo on github, then in command lines, do  cd site_dir\ngit init\ngit remote add origin https://github.com/***\ngit checkout --orphan gh-pages\ngit add .\ngit commit -m  adding pages \ngit push origin gh-pages  done! http://username.github.io/repository/.", 
+            "title": "how-to"
+        }, 
+        {
+            "location": "/tackles/github_host/#update-jwiki", 
+            "text": "cd my-wiki\nvim doc/file_to_edit.md\nmkdocs build\ncd site\ngit add .\ngit commit -m  edited file_to_edit \ngit push origin gh-pages", 
+            "title": "update jwiki"
         }, 
         {
             "location": "/tackles/mac_commands/", 

@@ -144,16 +144,21 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#how-to-use-github-to-host-a-simple-website">how to use github to host a simple website?</a></li>
+        <li class="main active"><a href="#use-github-to-host-a-simple-website">use github to host a simple website</a></li>
+        
+            <li><a href="#how-to">how-to</a></li>
+        
+            <li><a href="#update-jwiki">update jwiki</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="how-to-use-github-to-host-a-simple-website">how to use github to host a simple website?</h1>
+<h1 id="use-github-to-host-a-simple-website">use github to host a simple website</h1>
+<h4 id="how-to">how-to</h4>
 <p>for detail refer to <a href="http://blog.teamtreehouse.com/using-github-pages-to-host-your-website">this site</a></p>
-<p>brief steps: first create a repo on github </p>
+<p>briefly, first create a repo on github, then in command lines, do</p>
 <pre><code>cd site_dir
 git init
 git remote add origin https://github.com/***
@@ -163,7 +168,16 @@ git commit -m &quot;adding pages&quot;
 git push origin gh-pages
 </code></pre>
 
-<p>done! http://username.github.io/repository/.</p></div>
+<p>done! http://username.github.io/repository/.</p>
+<h4 id="update-jwiki">update jwiki</h4>
+<pre><code>cd my-wiki
+vim doc/file_to_edit.md
+mkdocs build
+cd site
+git add .
+git commit -m &quot;edited file_to_edit&quot;
+git push origin gh-pages
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
