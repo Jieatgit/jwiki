@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Github host - Jie's wiki</title>
+	<title>Fortran on Ubuntu - Jie's wiki</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -82,14 +82,14 @@
 
                     
                         
-<li >
-    <a href="../Fortran_on_Ubuntu/">Fortran on Ubuntu</a>
+<li class="active">
+    <a href="./">Fortran on Ubuntu</a>
 </li>
 
                     
                         
-<li class="active">
-    <a href="./">Github host</a>
+<li >
+    <a href="../github_host/">Github host</a>
 </li>
 
                     
@@ -146,12 +146,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../Fortran_on_Ubuntu/">
+                    <a rel="next" href="../Fortran/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../mac_commands/">
+                    <a rel="prev" href="../github_host/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -165,40 +165,70 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#use-github-to-host-a-simple-website">use github to host a simple website</a></li>
-        
-            <li><a href="#how-to">how-to</a></li>
-        
-            <li><a href="#update-jwiki">update jwiki</a></li>
+        <li class="main active"><a href="#install-intel-fortan-on-ubuntu-1210">install intel Fortan on Ubuntu 12.10</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="use-github-to-host-a-simple-website">use github to host a simple website</h1>
-<h4 id="how-to">how-to</h4>
-<p>for detail refer to <a href="http://blog.teamtreehouse.com/using-github-pages-to-host-your-website">this site</a></p>
-<p>briefly, first create a repo on github, then in command lines, do</p>
-<pre><code>cd site_dir
-git init
-git remote add origin https://github.com/***
-git checkout --orphan gh-pages
-git add .
-git commit -m &quot;adding pages&quot;
-git push origin gh-pages
-</code></pre>
-
-<p>done! http://username.github.io/repository/.</p>
-<h4 id="update-jwiki">update jwiki</h4>
-<pre><code>cd my-wiki
-vim doc/file_to_edit.md
-mkdocs build
-cd site
-git add .
-git commit -m &quot;edited file_to_edit&quot;
-git push origin gh-pages
-</code></pre></div>
+<h1 id="install-intel-fortan-on-ubuntu-1210">install intel Fortan on Ubuntu 12.10</h1>
+<ol>
+<li>
+<p>Prerequisite : </p>
+<ul>
+<li>see <a href="http://software.intel.com/en-us/articles/using-intel-compilers-for-linux-with-ubuntu">this link</a></li>
+</ul>
+<p><code>mv /bin/sh /bin/sh.orig
+ln -s /bin/bash /bin/sh</code>
+<em> Ubuntu 11.04 through Ubuntu 12.10  :
+</em> Composer XE  (aka version compiler versions 12.x and 13.x) prerequisites for Ubuntu Desktop, assuming that gcc and g++ are installed already:</p>
+<p><code>apt-get install build-essential
+apt-get install gcc-multilib
+apt-get install rpm
+apt-get install ia32-libs  #only needed if you install the 32bit compiler
+apt-get install openjdk-6-jre-headless</code>
+<em> Download Fortran compiler intel. An email address is required.  <a href="http://software.intel.com/en-us/non-commercial-software-development">Download link</a>
+</em> Install: 
+* locate the download tar file</p>
+<p><code>tar -xvzf l_fcomposer.tgz
+cd l_fcomposer
+sudo ./install.sh</code>
+<em> Follow the installation instructions:
+    - choose Option 1 to install Intel Fortran, 
+    - choose Option 1 to proceed with a serial number.
+    - type in the serial number (case-sensitive) given in the email. (XXXX-XXXXXXXX). Choose 1 for a default install.
+    - Press Enter to read the license agreement. The spacebar speeds through this quickly. Type 'accept' to accept the license agreement. 
+    - At some point the installation may stop to ask for some 'optional' packages to be installed. Skip this warning.
+</em> Config system: 
+* After the installation is finished go to the terminal and:</p>
+<p><code>cd ~
+nano .bashrc</code>
+* go to the end of this file and add the following lines:</p>
+<p><code>PATH="/opt/intel/Compiler/.../bin/intel64:$PATH"
+export PATH
+LD_LIBRARY_PATH="/opt/intel/Compiler/.../lib/intel64:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH</code></p>
+<ul>
+<li>Enter the right path in the lines above. Exit the file by saving the changes. </li>
+</ul>
+<p>let the system read the updated paths by the command:</p>
+<p><code>source .bashrc</code>
+The installation is finished.</p>
+</li>
+<li>
+<p>Test: </p>
+<ul>
+<li>write simple file as hello.f containing</li>
+</ul>
+<p><code>program hello
+print *,'Hello World!'
+end program</code>
+* Compile and run your code by the command:</p>
+<p><code>ifort hello.f
+./a.out</code></p>
+</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
