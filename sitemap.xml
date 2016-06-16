@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,8 +12,14 @@
     
         
     <url>
+     <loc>None/fun/fun_places_for_kid/</loc>
+     <lastmod>2016-06-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/fun/fun_places_to_go/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,31 +29,31 @@
         
     <url>
      <loc>None/tackles/Fortran_on_Ubuntu/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/tackles/github_host/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/tackles/mac_commands/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/tackles/markdown/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/tackles/mkdocs/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -57,13 +63,13 @@
         
     <url>
      <loc>None/work/DG_note/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/work/python_notes/</loc>
-     <lastmod>2016-06-06</lastmod>
+     <lastmod>2016-06-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

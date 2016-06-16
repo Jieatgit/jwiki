@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Mac commands - Jie's wiki</title>
+	<title>Fun places for kid - Jie's wiki</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -56,19 +56,19 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fun <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
-<li >
-    <a href="../../fun/fun_places_for_kid/">Fun places for kid</a>
+<li class="active">
+    <a href="./">Fun places for kid</a>
 </li>
 
                     
                         
 <li >
-    <a href="../../fun/fun_places_to_go/">Fun places to go</a>
+    <a href="../fun_places_to_go/">Fun places to go</a>
 </li>
 
                     
@@ -77,37 +77,37 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tackles <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="../Fortran_on_Ubuntu/">Fortran on Ubuntu</a>
+    <a href="../../tackles/Fortran_on_Ubuntu/">Fortran on Ubuntu</a>
 </li>
 
                     
                         
 <li >
-    <a href="../github_host/">Github host</a>
-</li>
-
-                    
-                        
-<li class="active">
-    <a href="./">Mac commands</a>
+    <a href="../../tackles/github_host/">Github host</a>
 </li>
 
                     
                         
 <li >
-    <a href="../markdown/">Markdown</a>
+    <a href="../../tackles/mac_commands/">Mac commands</a>
 </li>
 
                     
                         
 <li >
-    <a href="../mkdocs/">Mkdocs</a>
+    <a href="../../tackles/markdown/">Markdown</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../tackles/mkdocs/">Mkdocs</a>
 </li>
 
                     
@@ -146,12 +146,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../github_host/">
+                    <a rel="next" href="../..">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../markdown/">
+                    <a rel="prev" href="../fun_places_to_go/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -165,183 +165,33 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#compress-files">Compress files</a></li>
+        <li class="main active"><a href="#fun-places-for-kids">Fun places for kids</a></li>
         
-    
-        <li class="main "><a href="#disk-usage">Disk usage</a></li>
-        
-    
-        <li class="main "><a href="#vim-latex">vim-latex</a></li>
-        
-    
-        <li class="main "><a href="#purdue-server">Purdue server</a></li>
-        
-    
-        <li class="main "><a href="#virtualbox">virtualbox</a></li>
-        
-    
-        <li class="main "><a href="#grip">grip</a></li>
-        
-    
-        <li class="main "><a href="#sypder-py2">Sypder-py2</a></li>
-        
-    
-        <li class="main "><a href="#ssh-publicprivate-keys">SSH public/private keys</a></li>
-        
-    
-        <li class="main "><a href="#screen">screen</a></li>
+            <li><a href="#seattle">Seattle</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h3 id="compress-files">Compress files</h3>
+<h1 id="fun-places-for-kids">Fun places for kids</h1>
+<h2 id="seattle">Seattle</h2>
+<p>Fun Seattle places for 2-4 year olds</p>
 <ul>
-<li>
-<p>unpack .tar.gz files  </p>
-<pre><code>$ gunzip -c foo.tar.gz | tar xopf - 
-$ gunzip -c foo.tar.gz | tar xopft -
-</code></pre>
-</li>
-<li>
-<p>unpack .tar files     </p>
-<pre><code>$ tar xopf foo.tar  
-$ tar xopft foo.tar
-</code></pre>
-</li>
-<li>
-<p>unpack .zip files </p>
-<pre><code>$ unzip -a foo.zip
-</code></pre>
-</li>
-<li>
-<p>pack .zip files   </p>
-<pre><code>$ zip -r y.zip y.pdf
-</code></pre>
-</li>
-</ul>
-<h3 id="disk-usage">Disk usage</h3>
-<pre><code>$ du -h
-$ du -sh
-$ du -sh *
-$ du -sh dir_path
-$ du -a
-$ du -c # total contral
-$ du -sh #show total usage in the dir
-
-$ df -h
-</code></pre>
-
-<h3 id="vim-latex">vim-latex</h3>
-<ul>
-<li>vim-latex is install in ~/.vim</li>
-<li>to configure vim only for latex:</li>
-<li>edit file ~/.vim/ftplugin/tex_latexSuite.vim</li>
-</ul>
-<h3 id="purdue-server">Purdue server</h3>
-<p>conte.rcac.purdue.edu cluster:</p>
-<pre><code>$ module avail  # shows all available modules
-$ module load   # load module, for example:
-$ module load matlab/R2013a
-</code></pre>
-
-<h3 id="virtualbox">virtualbox</h3>
-<ul>
-<li>ID/pw ubuntu/chenjie</li>
-<li>
-<p>change ubuntu password:</p>
-<ol>
-<li>reboot while hold shift</li>
-<li>Let your virtual Machine to capture your mouse.</li>
-<li>Hold the shift key down to get the grub menu.</li>
-<li>Select the recovery mode option.</li>
-<li>Select drop to root shell prompt.</li>
-<li>type command: mount -rw -o remount /</li>
-<li>Now, change with # passwd [username] (You can also see the list of users using # nano /etc/passwd).</li>
-</ol>
-</li>
-<li>
-<p>mount shared folder:</p>
-<ul>
-<li>add shared folder in virtualBox</li>
-<li>type command in ubuntu: <br />
-<code>$ sudo mount -t vboxsf -o uid=1000,gid=1000 share /home/&lt;user&gt;/vboxshare</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="grip">grip</h3>
-<p>use grip to convert md file to html file from command line. see <a href="https://github.com/joeyespo/grip">this link</a></p>
-<pre><code>grip 
-grip foo.md
-grip foo.md --export foo.html
-</code></pre>
-
-<h3 id="sypder-py2">Sypder-py2</h3>
-<p>add a new module to Syper</p>
-<pre><code>$python
-&gt;&gt;&gt;import talib
-&gt;&gt;&gt;talib  # copy the module location
-&gt;&gt;&gt;eixt()
-</code></pre>
-
-<p>If it is a .egg file</p>
-<pre><code>$cp new_module.egg /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7/
-unzip new_module.egg
-rm new_module.egg
-</code></pre>
-
-<p>if it is a folder</p>
-<pre><code>$cp -r new_module_folder /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7
-</code></pre>
-
-<h3 id="ssh-publicprivate-keys">SSH public/private keys</h3>
-<p>SSH (Secure Shell) can be set up with public/private key pairs so that you do not have to type the password each time. Because SSH is the transport for other services such as SCP (secure copy), SFTP (secure file transfer), and other services (CVS, etc), this can be very convenient and save you a lot of typing.</p>
-<p>On the local machine, type the BOLD part. The non-bold part is what you might see as output or prompt.</p>
-<ul>
-<li>
-<p>Step 1: </p>
-<pre><code>$ ssh-keygen -t dsa 
-    Generating public/private dsa key pair. 
-    Enter file in which to save the key (~/.ssh/id_dsa): (just type return) 
-    Enter passphrase (empty for no passphrase): (just type return) 
-    Enter same passphrase again: (just type return) 
-    Your identification has been saved in ~/.ssh/id_dsa 
-    Your public key has been saved in ~/.ssh/id_dsa.pub 
-    The key fingerprint is: 
-    Some really long string
-</code></pre>
-<ul>
-<li>Step 2: Then, paste the content of the local <code>~/.ssh/id_dsa.pub</code> file into the file <code>~/.ssh/authorized_keys</code> on the remote host.
-RSA instead of DSA<ul>
-<li>If you want something strong, you could try 
-<code>$ ssh-keygen -t rsa -b 4096</code></li>
-<li>Instead of the names <code>id_dsa and id_dsa.pub</code>, it will be <code>id_rsa and id_rsa.pub</code> , etc.</li>
-<li>The rest of the steps are identical.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="screen">screen</h3>
-<ul>
-<li>start screen</li>
-</ul>
-<pre><code>screen -ls      # list all screen sessions
-screen          # start screen
-screen -S Name  # start screen and give it a name
-screen -r       # resume last screen
-screen -r Name  # resume screen with a name
-</code></pre>
-
-<ul>
-<li>exit</li>
-</ul>
-<pre><code>exit
-C-a d
-C-a D D
-C-a \
-</code></pre></div>
+<li><a href="https://www.imaginecm.org/">Children''s museum in Everett</a></li>
+<li><a href="https://everettwa.gov/773/Animal-Farm">Animal farm/petting zoo</a> at Forest Park</li>
+<li><a href="http://www.thereptilezoo.org/">Reptile Zoo</a></li>
+<li><a href="https://remlingerfarms.com/">Remlinger Farm</a> U-pick strawberries</li>
+<li><a href="http://www.elevatedsportz.com/">http://www.elevatedsportz.com/</a></li>
+<li><a href="http://www.playdatesea.com/">http://www.playdatesea.com/</a></li>
+<li>Chuck E Cheese (reported food poisoning though)</li>
+<li>Fox Hollow Farm</li>
+<li>Kelsey Creek Farm in Bellevue has sone farm animals and there is a playgound close by</li>
+<li><a href="http://www.arenasports.net/fun-zone-inflatable-playground">Magnuson Arena Sports Fun Zone</a> – The have around 10 bounce houses all in one place.  Get there early as they fill up fast on rainy days</li>
+<li><a href="http://www.ci.lynnwood.wa.us/PlayLynnwood/RecCenter.htm">Lynnwood Rec Center Indoor Pool</a>  - The Beach Swim is great for toddlers. </li>
+<li><a href="http://www.seattlegymnastics.com/lakecity/events/indoor-playground">Seattle Gymnastics Academy Open Gym</a></li>
+<li><a href="https://www.trainmuseum.org/">Northwest Rail Museum</a></li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
