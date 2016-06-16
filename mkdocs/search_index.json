@@ -317,7 +317,7 @@
         }, 
         {
             "location": "/work/python_notes/", 
-            "text": "Python notes\n\n\n\n\nPackages\n\n\nSee [package list]\n/Users/Jie/Dropbox/work/Study/python/useful_libraries_for_data_science_in_python.md\n for more\n\n\n\n\nFundamental Libraries for Scientific Computing\n\n\nIPython Notebook\n\n\nNumPy\n\n\npandas\n\n\nSciPy\n\n\n\n\n\n\nMath and Statistics\n\n\nSymPy\n\n\nStatsmodels\n\n\n\n\n\n\nMachine Learning\n\n\nScikit-learn\n\n\nShogun\n\n\nPyBrain\n\n\nPyLearn2\n\n\nPyMC\n\n\n\n\n\n\nPlotting and Visualization\n\n\nBokeh\n\n\nd3py\n\n\nggplot\n\n\nmatplotlib\n\n\nplotly\n\n\nprettyplotlib\n\n\nseaborn\n\n\n\n\n\n\nData formatting and storage\n\n\ncsvkit\n\n\nPyTables\n\n\nsqlite3", 
+            "text": "Python notes\n\n\n\n\nPackages\n\n\nSee \npackage list\n for more\n\n\n\n\nFundamental Libraries for Scientific Computing\n\n\nIPython Notebook\n\n\nNumPy\n\n\npandas\n\n\nSciPy\n\n\n\n\n\n\nMath and Statistics\n\n\nSymPy\n\n\nStatsmodels\n\n\n\n\n\n\nMachine Learning\n\n\nScikit-learn\n\n\nShogun\n\n\nPyBrain\n\n\nPyLearn2\n\n\nPyMC\n\n\n\n\n\n\nPlotting and Visualization\n\n\nBokeh\n\n\nd3py\n\n\nggplot\n\n\nmatplotlib\n\n\nplotly\n\n\nprettyplotlib\n\n\nseaborn\n\n\n\n\n\n\nData formatting and storage\n\n\ncsvkit\n\n\nPyTables\n\n\nsqlite3", 
             "title": "Python notes"
         }, 
         {
@@ -327,7 +327,7 @@
         }, 
         {
             "location": "/work/python_notes/#packages", 
-            "text": "See [package list] /Users/Jie/Dropbox/work/Study/python/useful_libraries_for_data_science_in_python.md  for more   Fundamental Libraries for Scientific Computing  IPython Notebook  NumPy  pandas  SciPy    Math and Statistics  SymPy  Statsmodels    Machine Learning  Scikit-learn  Shogun  PyBrain  PyLearn2  PyMC    Plotting and Visualization  Bokeh  d3py  ggplot  matplotlib  plotly  prettyplotlib  seaborn    Data formatting and storage  csvkit  PyTables  sqlite3", 
+            "text": "See  package list  for more   Fundamental Libraries for Scientific Computing  IPython Notebook  NumPy  pandas  SciPy    Math and Statistics  SymPy  Statsmodels    Machine Learning  Scikit-learn  Shogun  PyBrain  PyLearn2  PyMC    Plotting and Visualization  Bokeh  d3py  ggplot  matplotlib  plotly  prettyplotlib  seaborn    Data formatting and storage  csvkit  PyTables  sqlite3", 
             "title": "Packages"
         }
     ]
