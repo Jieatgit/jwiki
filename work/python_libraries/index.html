@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Python libraries - Jie's wiki</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Jie's wiki</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fun <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../fun/fun_places_for_kid/">Fun places for kid</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../fun/fun_places_to_go/">Fun places to go</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tackles <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../tackles/Fortran_on_Ubuntu/">Fortran on Ubuntu</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../tackles/github_host/">Github host</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../tackles/mac_commands/">Mac commands</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../tackles/markdown/">Markdown</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../tackles/mkdocs/">Mkdocs</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Work <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../DG_note/">DG note</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Python libraries</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../python_notes/">Python notes</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../DG_note/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../python_notes/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#useful-libraries-for-data-science-in-python">Useful libraries for data science in Python</a></li>
+        
+            <li><a href="#table-of-contents">Table of Contents</a></li>
+        
+            <li><a href="#fundamental-libraries-for-scientific-computing">Fundamental Libraries for Scientific Computing</a></li>
+        
+            <li><a href="#math-and-statistics">Math and Statistics</a></li>
+        
+            <li><a href="#machine-learning">Machine Learning</a></li>
+        
+            <li><a href="#plotting-and-visualization">Plotting and Visualization</a></li>
+        
+            <li><a href="#data-formatting-and-management">Data formatting and management</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<p>[<a href="https://github.com/rasbt/pattern_classification">&lt;- back</a>] to the pattern_classification repository</p>
+<p>Sebastian Raschka<br />
+last updated: 10/22/2014 </p>
+<h1 id="useful-libraries-for-data-science-in-python">Useful libraries for data science in Python</h1>
+<p>This is not meant to be a complete list of all Python libraries out there that are related to scientific computing and data analysis -- printed on paper and stacked one on top of the other, the stack could easily reach a height of 238,857 miles, the distance from Earth to Moon.</p>
+<p>However, I would still be looking forward to additions and suggestions.<br />
+Please feel free to drop me a note via
+<a href="https://twitter.com/rasbt">twitter</a>, <a href="mailto:bluewoodtree@gmail.com">email</a>, or <a href="https://plus.google.com/+SebastianRaschka">google+</a>.</p>
+<p><br>
+<br></p>
+<p><a class="mk-toclify" id="table-of-contents"></a></p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#fundamental-libraries-for-scientific-computing">Fundamental Libraries for Scientific Computing</a><ul>
+<li><a href="#ipython-notebook">IPython Notebook</a></li>
+<li><a href="#numpy">NumPy</a></li>
+<li><a href="#pandas">pandas</a></li>
+<li><a href="#scipy">SciPy</a></li>
+</ul>
+</li>
+<li><a href="#math-and-statistics">Math and Statistics</a><ul>
+<li><a href="#sympy">SymPy</a></li>
+<li><a href="#statsmodels">Statsmodels</a></li>
+</ul>
+</li>
+<li><a href="#machine-learning">Machine Learning</a><ul>
+<li><a href="#scikit-learn">Scikit-learn</a></li>
+<li><a href="#shogun">Shogun</a></li>
+<li><a href="#pybrain">PyBrain</a></li>
+<li><a href="#pylearn2">PyLearn2</a></li>
+<li><a href="#pymc">PyMC</a></li>
+</ul>
+</li>
+<li><a href="#plotting-and-visualization">Plotting and Visualization</a><ul>
+<li><a href="#bokeh">Bokeh</a></li>
+<li><a href="#d3py">d3py</a></li>
+<li><a href="#ggplot">ggplot</a></li>
+<li><a href="#matplotlib">matplotlib</a></li>
+<li><a href="#plotly">plotly</a></li>
+<li><a href="#prettyplotlib">prettyplotlib</a></li>
+<li><a href="#seaborn">seaborn</a></li>
+</ul>
+</li>
+<li><a href="#data-formatting-and-storage">Data formatting and storage</a><ul>
+<li><a href="#csvkit">csvkit</a></li>
+<li><a href="#pytables">PyTables</a></li>
+<li><a href="#sqlite3">sqlite3</a> </li>
+</ul>
+</li>
+</ul>
+<p><br>
+<br></p>
+<p><a class="mk-toclify" id="fundamental-libraries-for-scientific-computing"></a></p>
+<h2 id="fundamental-libraries-for-scientific-computing">Fundamental Libraries for Scientific Computing</h2>
+<p><a href="#table-of-contents">back to top</a></p>
+<p><br></p>
+<p><a class="mk-toclify" id="ipython-notebook"></a></p>
+<h4 id="ipython-notebook">IPython Notebook</h4>
+<p>Website: <a href="http://ipython.org/notebook.html">http://ipython.org/notebook.html</a></p>
+<p>IPython is an alternative Python command line shell for interactive computing with lots of useful enhancements over the "default" Python interpreter.<br />
+The browser-based documents IPython Notebooks are a great environment for scientific computing: Not only to execute code, but also to add informative documentation via Markdown, HTML, LaTeX, embedded images, and inline data plots via e.g., matplotlib. </p>
+<p><br></p>
+<p><a class="mk-toclify" id="numpy"></a></p>
+<h4 id="numpy">NumPy</h4>
+<p>Website: <a href="http://www.numpy.org">http://www.numpy.org</a></p>
+<p>NumPy is probably the most fundamental package for efficient scientific computing in Python through linear algebra routines. One of NumPy's major strength is that most operations are implemented as C/C++ and FORTRAN code for efficiency. At its core, NumPy works with multi-dimensional array objects that support broadcasting and lead to efficient, vectorized code.</p>
+<p><br> </p>
+<p><a class="mk-toclify" id="pandas"></a></p>
+<h4 id="pandas">pandas</h4>
+<p>Website: <a href="http://pandas.pydata.org">http://pandas.pydata.org</a></p>
+<p>Pandas is a library for operating with table-like structures. It comes with a powerful DataFrame object, which is a multi-dimensional array object for efficient numerical operations similar to NumPy's <em>ndarray</em> with additional functionalities.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="scipy"></a></p>
+<h4 id="scipy">SciPy</h4>
+<p>Website: <a href="http://scipy.org/scipylib/index.html">http://scipy.org/scipylib/index.html</a></p>
+<p>SciPy is a considered to be one of the core packages for scientific computing routines. As a useful expansion of the NumPy core functionality, it contains a broad range of functions for linear algebra, interpolation, integration, clustering, and <a href="http://docs.scipy.org/doc/scipy/reference/index.html">many more</a>.</p>
+<p><br>
+<br></p>
+<p><a class="mk-toclify" id="math-and-statistics"></a></p>
+<h2 id="math-and-statistics">Math and Statistics</h2>
+<p><a href="#table-of-contents">back to top</a></p>
+<p><br></p>
+<p><a class="mk-toclify" id="sympy"></a></p>
+<h4 id="sympy">SymPy</h4>
+<p>Website: <a href="http://www.sympygamma.com">http://www.sympygamma.com</a></p>
+<p>SymPy is a Python library for symbolic mathematical computations. It has a broad range of features, ranging from calculus, algebra, geometry, discrete mathematics, and even quantum physics. It also includes basic plotting functionality and print functions with LaTeX support.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="statsmodels"></a></p>
+<h4 id="statsmodels">Statsmodels</h4>
+<p>Website: <a href="http://statsmodels.sourceforge.net">http://statsmodels.sourceforge.net</a></p>
+<p>Statsmodel is a Python library that is centered around statistical data analysis mainly through linear models and includes a variety of statistical tests.</p>
+<p><br>
+<br></p>
+<p><a class="mk-toclify" id="machine-learning"></a></p>
+<h2 id="machine-learning">Machine Learning</h2>
+<p><a href="#table-of-contents">back to top</a></p>
+<p><br></p>
+<p><a class="mk-toclify" id="scikit-learn"></a></p>
+<h4 id="scikit-learn">Scikit-learn</h4>
+<p>Website: <a href="http://scikit-learn.org/stable/">http://scikit-learn.org/stable/</a></p>
+<p>Scikit-learn is is probably the most popular general machine library for Python. It includes a broad range of different classifiers, cross-validation and other model selection methods, dimensionality reduction techniques, modules for regression and clustering analysis, and a useful data-preprocessing module.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="shogun"></a></p>
+<h4 id="shogun">Shogun</h4>
+<p>Website: <a href="http://www.shogun-toolbox.org">http://www.shogun-toolbox.org</a></p>
+<p>Shogun is a machine learning library that is focussed on large-scale kernel methods. Its particular strengths are Support Vector Machines (SVMs) and it comes with a range of different SVM implementations.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="pybrain"></a></p>
+<h4 id="pybrain">PyBrain</h4>
+<p>Website: <a href="http://pybrain.org">http://pybrain.org</a></p>
+<p><br></p>
+<p>PyBrain (Python-Based Reinforcement Learning, Artificial Intelligence and Neural Network Library) is a machine learning library that uses neural networks to focus on supervised learning, reinforcement learning, and evolutionary methods.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="pylearn2"></a></p>
+<h4 id="pylearn2">PyLearn2</h4>
+<p>Website: <a href="http://deeplearning.net/software/pylearn2/">http://deeplearning.net/software/pylearn2/</a></p>
+<p>PyLearn2 is a machine learning <strong>research</strong> library - a library to study machine learning - focussed on deep and convolutional neural networks, restricted Boltzman machines, and auto-encoders.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="pymc"></a></p>
+<h4 id="pymc">PyMC</h4>
+<p>Website: <a href="http://pymc-devs.github.io/pymc/index.html">http://pymc-devs.github.io/pymc/index.html</a></p>
+<p>The focus of PyMC is Bayesian statistics and comes with a broad range of algorithms (including Markov Chain Monte Carlo, MCMC) for model fitting.</p>
+<p><br>
+<br></p>
+<p><a class="mk-toclify" id="plotting-and-visualization"></a></p>
+<h2 id="plotting-and-visualization">Plotting and Visualization</h2>
+<p><a href="#table-of-contents">back to top</a></p>
+<p><br></p>
+<p><a class="mk-toclify" id="bokeh"></a></p>
+<h4 id="bokeh">Bokeh</h4>
+<p>Website: <a href="http://bokeh.pydata.org">http://bokeh.pydata.org</a></p>
+<p>Bokeh is a plottling library that is focussed on aesthetic layouts and interactivity to produce high-quality plots for web browsers.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="d3py"></a></p>
+<h4 id="d3py">d3py</h4>
+<p>Website: <a href="https://github.com/mikedewar/d3py">https://github.com/mikedewar/d3py</a></p>
+<p>d3py is a plotting library to create interactive data visualizations based on d3. </p>
+<p><br></p>
+<p><a class="mk-toclify" id="ggplot"></a></p>
+<h4 id="ggplot">ggplot</h4>
+<p>Website: <a href="https://github.com/yhat/ggplot">https://github.com/yhat/ggplot</a></p>
+<p>ggplot is a port of R's popular ggplot2 library, which brings the alternative syntax and unique visualization style to Python. </p>
+<p><br></p>
+<p><a class="mk-toclify" id="matplotlib"></a></p>
+<h4 id="matplotlib">matplotlib</h4>
+<p>Website: <a href="http://matplotlib.org">http://matplotlib.org</a></p>
+<p>Matplotlib is Python's most popular and comprehensive plotting library that is especially useful in combination with NumPy/SciPy. </p>
+<p><br></p>
+<p><a class="mk-toclify" id="plotly"></a></p>
+<h4 id="plotly">plotly</h4>
+<p>Website: <a href="https://plot.ly">https://plot.ly</a></p>
+<p>Plotly is a plotting library that is focussed on adding interactivity to data visualizations and to share them via the web for collaborative data analysis. To produce interactive plots, plotly requires connection to the internet to stream data to the plotly servers, however, plots can also be saved in common image formats for offline use.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="prettyplotlib"></a></p>
+<h4 id="prettyplotlib">prettyplotlib</h4>
+<p>Website: <a href="http://olgabot.github.io/prettyplotlib/">http://olgabot.github.io/prettyplotlib/</a></p>
+<p>Prettyplotlib is a nice enhancement-library that turns matplotlib's default styles into beautiful, presentation-ready plots based on information design and color perception studies.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="seaborn"></a></p>
+<h4 id="seaborn">seaborn</h4>
+<p>Website: <a href="http://web.stanford.edu/~mwaskom/software/seaborn/">http://web.stanford.edu/~mwaskom/software/seaborn/</a></p>
+<p>Seaborn is based on matplotlib's core functionality and adds additional features (e.g., violin plots) and visual enhancements to create even more beautiful plots.</p>
+<p><br>
+<br></p>
+<p><a class="mk-toclify" id="data-formatting-and-management"></a></p>
+<h2 id="data-formatting-and-management">Data formatting and management</h2>
+<p><a href="#table-of-contents">back to top</a></p>
+<p><br></p>
+<p><a class="mk-toclify" id="csvkit"></a></p>
+<h4 id="csvkit">csvkit</h4>
+<p>Website: <a href="https://csvkit.readthedocs.org">https://csvkit.readthedocs.org</a></p>
+<p>csvkit is also known as the "Swiss Army knife for comma-delimited data files" that offers additional functionality and features over Python's in-built <a href="https://docs.python.org/3.4/library/csv.html"><code>csv</code></a> module. It comes with several shell command-line tools, e.g., csvgrep, csvsort, etc., but of course it can also be imported as library in Python.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="pytables"></a></p>
+<h4 id="pytables">PyTables</h4>
+<p>Website: <a href="http://www.pytables.org">http://www.pytables.org</a></p>
+<p>PyTables is a library that combines HDF5 and NumPy for working with very large datasets efficiently. PyTables also makes use of C-extensions (via Cython) for fast data access and pulling data into NumPy or pandas arrays.</p>
+<p><br></p>
+<p><a class="mk-toclify" id="sqlite3"></a></p>
+<h4 id="sqlite3">sqlite3</h4>
+<p>Website: <a href="https://docs.python.org/3.4/library/sqlite3.html">https://docs.python.org/3.4/library/sqlite3.html</a></p>
+<p>Although, the <code>sqlite3</code> is part of Python's Standard Library, it is still worth mentioning this classic that provides a Python interface to SQLite databases. SQLitean open-source SQL database engine that is ideal for smaller workgroups, because it is a single locally stored database file (up to 140 Tb in size) that does not require -- in contrast to SQL -- any server infrastructure.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

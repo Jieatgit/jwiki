@@ -316,6 +316,151 @@
             "title": "notes to run Time_domain_DG"
         }, 
         {
+            "location": "/work/python_libraries/", 
+            "text": "[\n- back\n] to the pattern_classification repository\n\n\nSebastian Raschka\n\nlast updated: 10/22/2014 \n\n\nUseful libraries for data science in Python\n\n\nThis is not meant to be a complete list of all Python libraries out there that are related to scientific computing and data analysis -- printed on paper and stacked one on top of the other, the stack could easily reach a height of 238,857 miles, the distance from Earth to Moon.\n\n\nHowever, I would still be looking forward to additions and suggestions.\n\nPlease feel free to drop me a note via\n\ntwitter\n, \nemail\n, or \ngoogle+\n.\n\n\n\n\n\n\n\n\nTable of Contents\n\n\n\n\nFundamental Libraries for Scientific Computing\n\n\nIPython Notebook\n\n\nNumPy\n\n\npandas\n\n\nSciPy\n\n\n\n\n\n\nMath and Statistics\n\n\nSymPy\n\n\nStatsmodels\n\n\n\n\n\n\nMachine Learning\n\n\nScikit-learn\n\n\nShogun\n\n\nPyBrain\n\n\nPyLearn2\n\n\nPyMC\n\n\n\n\n\n\nPlotting and Visualization\n\n\nBokeh\n\n\nd3py\n\n\nggplot\n\n\nmatplotlib\n\n\nplotly\n\n\nprettyplotlib\n\n\nseaborn\n\n\n\n\n\n\nData formatting and storage\n\n\ncsvkit\n\n\nPyTables\n\n\nsqlite3\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFundamental Libraries for Scientific Computing\n\n\nback to top\n\n\n\n\n\n\nIPython Notebook\n\n\nWebsite: \nhttp://ipython.org/notebook.html\n\n\nIPython is an alternative Python command line shell for interactive computing with lots of useful enhancements over the \"default\" Python interpreter.\n\nThe browser-based documents IPython Notebooks are a great environment for scientific computing: Not only to execute code, but also to add informative documentation via Markdown, HTML, LaTeX, embedded images, and inline data plots via e.g., matplotlib. \n\n\n\n\n\n\nNumPy\n\n\nWebsite: \nhttp://www.numpy.org\n\n\nNumPy is probably the most fundamental package for efficient scientific computing in Python through linear algebra routines. One of NumPy's major strength is that most operations are implemented as C/C++ and FORTRAN code for efficiency. At its core, NumPy works with multi-dimensional array objects that support broadcasting and lead to efficient, vectorized code.\n\n\n \n\n\n\n\npandas\n\n\nWebsite: \nhttp://pandas.pydata.org\n\n\nPandas is a library for operating with table-like structures. It comes with a powerful DataFrame object, which is a multi-dimensional array object for efficient numerical operations similar to NumPy's \nndarray\n with additional functionalities.\n\n\n\n\n\n\nSciPy\n\n\nWebsite: \nhttp://scipy.org/scipylib/index.html\n\n\nSciPy is a considered to be one of the core packages for scientific computing routines. As a useful expansion of the NumPy core functionality, it contains a broad range of functions for linear algebra, interpolation, integration, clustering, and \nmany more\n.\n\n\n\n\n\n\n\n\nMath and Statistics\n\n\nback to top\n\n\n\n\n\n\nSymPy\n\n\nWebsite: \nhttp://www.sympygamma.com\n\n\nSymPy is a Python library for symbolic mathematical computations. It has a broad range of features, ranging from calculus, algebra, geometry, discrete mathematics, and even quantum physics. It also includes basic plotting functionality and print functions with LaTeX support.\n\n\n\n\n\n\nStatsmodels\n\n\nWebsite: \nhttp://statsmodels.sourceforge.net\n\n\nStatsmodel is a Python library that is centered around statistical data analysis mainly through linear models and includes a variety of statistical tests.\n\n\n\n\n\n\n\n\nMachine Learning\n\n\nback to top\n\n\n\n\n\n\nScikit-learn\n\n\nWebsite: \nhttp://scikit-learn.org/stable/\n\n\nScikit-learn is is probably the most popular general machine library for Python. It includes a broad range of different classifiers, cross-validation and other model selection methods, dimensionality reduction techniques, modules for regression and clustering analysis, and a useful data-preprocessing module.\n\n\n\n\n\n\nShogun\n\n\nWebsite: \nhttp://www.shogun-toolbox.org\n\n\nShogun is a machine learning library that is focussed on large-scale kernel methods. Its particular strengths are Support Vector Machines (SVMs) and it comes with a range of different SVM implementations.\n\n\n\n\n\n\nPyBrain\n\n\nWebsite: \nhttp://pybrain.org\n\n\n\n\nPyBrain (Python-Based Reinforcement Learning, Artificial Intelligence and Neural Network Library) is a machine learning library that uses neural networks to focus on supervised learning, reinforcement learning, and evolutionary methods.\n\n\n\n\n\n\nPyLearn2\n\n\nWebsite: \nhttp://deeplearning.net/software/pylearn2/\n\n\nPyLearn2 is a machine learning \nresearch\n library - a library to study machine learning - focussed on deep and convolutional neural networks, restricted Boltzman machines, and auto-encoders.\n\n\n\n\n\n\nPyMC\n\n\nWebsite: \nhttp://pymc-devs.github.io/pymc/index.html\n\n\nThe focus of PyMC is Bayesian statistics and comes with a broad range of algorithms (including Markov Chain Monte Carlo, MCMC) for model fitting.\n\n\n\n\n\n\n\n\nPlotting and Visualization\n\n\nback to top\n\n\n\n\n\n\nBokeh\n\n\nWebsite: \nhttp://bokeh.pydata.org\n\n\nBokeh is a plottling library that is focussed on aesthetic layouts and interactivity to produce high-quality plots for web browsers.\n\n\n\n\n\n\nd3py\n\n\nWebsite: \nhttps://github.com/mikedewar/d3py\n\n\nd3py is a plotting library to create interactive data visualizations based on d3. \n\n\n\n\n\n\nggplot\n\n\nWebsite: \nhttps://github.com/yhat/ggplot\n\n\nggplot is a port of R's popular ggplot2 library, which brings the alternative syntax and unique visualization style to Python. \n\n\n\n\n\n\nmatplotlib\n\n\nWebsite: \nhttp://matplotlib.org\n\n\nMatplotlib is Python's most popular and comprehensive plotting library that is especially useful in combination with NumPy/SciPy. \n\n\n\n\n\n\nplotly\n\n\nWebsite: \nhttps://plot.ly\n\n\nPlotly is a plotting library that is focussed on adding interactivity to data visualizations and to share them via the web for collaborative data analysis. To produce interactive plots, plotly requires connection to the internet to stream data to the plotly servers, however, plots can also be saved in common image formats for offline use.\n\n\n\n\n\n\nprettyplotlib\n\n\nWebsite: \nhttp://olgabot.github.io/prettyplotlib/\n\n\nPrettyplotlib is a nice enhancement-library that turns matplotlib's default styles into beautiful, presentation-ready plots based on information design and color perception studies.\n\n\n\n\n\n\nseaborn\n\n\nWebsite: \nhttp://web.stanford.edu/~mwaskom/software/seaborn/\n\n\nSeaborn is based on matplotlib's core functionality and adds additional features (e.g., violin plots) and visual enhancements to create even more beautiful plots.\n\n\n\n\n\n\n\n\nData formatting and management\n\n\nback to top\n\n\n\n\n\n\ncsvkit\n\n\nWebsite: \nhttps://csvkit.readthedocs.org\n\n\ncsvkit is also known as the \"Swiss Army knife for comma-delimited data files\" that offers additional functionality and features over Python's in-built \ncsv\n module. It comes with several shell command-line tools, e.g., csvgrep, csvsort, etc., but of course it can also be imported as library in Python.\n\n\n\n\n\n\nPyTables\n\n\nWebsite: \nhttp://www.pytables.org\n\n\nPyTables is a library that combines HDF5 and NumPy for working with very large datasets efficiently. PyTables also makes use of C-extensions (via Cython) for fast data access and pulling data into NumPy or pandas arrays.\n\n\n\n\n\n\nsqlite3\n\n\nWebsite: \nhttps://docs.python.org/3.4/library/sqlite3.html\n\n\nAlthough, the \nsqlite3\n is part of Python's Standard Library, it is still worth mentioning this classic that provides a Python interface to SQLite databases. SQLitean open-source SQL database engine that is ideal for smaller workgroups, because it is a single locally stored database file (up to 140 Tb in size) that does not require -- in contrast to SQL -- any server infrastructure.", 
+            "title": "Python libraries"
+        }, 
+        {
+            "location": "/work/python_libraries/#useful-libraries-for-data-science-in-python", 
+            "text": "This is not meant to be a complete list of all Python libraries out there that are related to scientific computing and data analysis -- printed on paper and stacked one on top of the other, the stack could easily reach a height of 238,857 miles, the distance from Earth to Moon.  However, I would still be looking forward to additions and suggestions. \nPlease feel free to drop me a note via twitter ,  email , or  google+ .", 
+            "title": "Useful libraries for data science in Python"
+        }, 
+        {
+            "location": "/work/python_libraries/#table-of-contents", 
+            "text": "Fundamental Libraries for Scientific Computing  IPython Notebook  NumPy  pandas  SciPy    Math and Statistics  SymPy  Statsmodels    Machine Learning  Scikit-learn  Shogun  PyBrain  PyLearn2  PyMC    Plotting and Visualization  Bokeh  d3py  ggplot  matplotlib  plotly  prettyplotlib  seaborn    Data formatting and storage  csvkit  PyTables  sqlite3", 
+            "title": "Table of Contents"
+        }, 
+        {
+            "location": "/work/python_libraries/#fundamental-libraries-for-scientific-computing", 
+            "text": "back to top", 
+            "title": "Fundamental Libraries for Scientific Computing"
+        }, 
+        {
+            "location": "/work/python_libraries/#ipython-notebook", 
+            "text": "Website:  http://ipython.org/notebook.html  IPython is an alternative Python command line shell for interactive computing with lots of useful enhancements over the \"default\" Python interpreter. \nThe browser-based documents IPython Notebooks are a great environment for scientific computing: Not only to execute code, but also to add informative documentation via Markdown, HTML, LaTeX, embedded images, and inline data plots via e.g., matplotlib.", 
+            "title": "IPython Notebook"
+        }, 
+        {
+            "location": "/work/python_libraries/#numpy", 
+            "text": "Website:  http://www.numpy.org  NumPy is probably the most fundamental package for efficient scientific computing in Python through linear algebra routines. One of NumPy's major strength is that most operations are implemented as C/C++ and FORTRAN code for efficiency. At its core, NumPy works with multi-dimensional array objects that support broadcasting and lead to efficient, vectorized code.", 
+            "title": "NumPy"
+        }, 
+        {
+            "location": "/work/python_libraries/#pandas", 
+            "text": "Website:  http://pandas.pydata.org  Pandas is a library for operating with table-like structures. It comes with a powerful DataFrame object, which is a multi-dimensional array object for efficient numerical operations similar to NumPy's  ndarray  with additional functionalities.", 
+            "title": "pandas"
+        }, 
+        {
+            "location": "/work/python_libraries/#scipy", 
+            "text": "Website:  http://scipy.org/scipylib/index.html  SciPy is a considered to be one of the core packages for scientific computing routines. As a useful expansion of the NumPy core functionality, it contains a broad range of functions for linear algebra, interpolation, integration, clustering, and  many more .", 
+            "title": "SciPy"
+        }, 
+        {
+            "location": "/work/python_libraries/#math-and-statistics", 
+            "text": "back to top", 
+            "title": "Math and Statistics"
+        }, 
+        {
+            "location": "/work/python_libraries/#sympy", 
+            "text": "Website:  http://www.sympygamma.com  SymPy is a Python library for symbolic mathematical computations. It has a broad range of features, ranging from calculus, algebra, geometry, discrete mathematics, and even quantum physics. It also includes basic plotting functionality and print functions with LaTeX support.", 
+            "title": "SymPy"
+        }, 
+        {
+            "location": "/work/python_libraries/#statsmodels", 
+            "text": "Website:  http://statsmodels.sourceforge.net  Statsmodel is a Python library that is centered around statistical data analysis mainly through linear models and includes a variety of statistical tests.", 
+            "title": "Statsmodels"
+        }, 
+        {
+            "location": "/work/python_libraries/#machine-learning", 
+            "text": "back to top", 
+            "title": "Machine Learning"
+        }, 
+        {
+            "location": "/work/python_libraries/#scikit-learn", 
+            "text": "Website:  http://scikit-learn.org/stable/  Scikit-learn is is probably the most popular general machine library for Python. It includes a broad range of different classifiers, cross-validation and other model selection methods, dimensionality reduction techniques, modules for regression and clustering analysis, and a useful data-preprocessing module.", 
+            "title": "Scikit-learn"
+        }, 
+        {
+            "location": "/work/python_libraries/#shogun", 
+            "text": "Website:  http://www.shogun-toolbox.org  Shogun is a machine learning library that is focussed on large-scale kernel methods. Its particular strengths are Support Vector Machines (SVMs) and it comes with a range of different SVM implementations.", 
+            "title": "Shogun"
+        }, 
+        {
+            "location": "/work/python_libraries/#pybrain", 
+            "text": "Website:  http://pybrain.org   PyBrain (Python-Based Reinforcement Learning, Artificial Intelligence and Neural Network Library) is a machine learning library that uses neural networks to focus on supervised learning, reinforcement learning, and evolutionary methods.", 
+            "title": "PyBrain"
+        }, 
+        {
+            "location": "/work/python_libraries/#pylearn2", 
+            "text": "Website:  http://deeplearning.net/software/pylearn2/  PyLearn2 is a machine learning  research  library - a library to study machine learning - focussed on deep and convolutional neural networks, restricted Boltzman machines, and auto-encoders.", 
+            "title": "PyLearn2"
+        }, 
+        {
+            "location": "/work/python_libraries/#pymc", 
+            "text": "Website:  http://pymc-devs.github.io/pymc/index.html  The focus of PyMC is Bayesian statistics and comes with a broad range of algorithms (including Markov Chain Monte Carlo, MCMC) for model fitting.", 
+            "title": "PyMC"
+        }, 
+        {
+            "location": "/work/python_libraries/#plotting-and-visualization", 
+            "text": "back to top", 
+            "title": "Plotting and Visualization"
+        }, 
+        {
+            "location": "/work/python_libraries/#bokeh", 
+            "text": "Website:  http://bokeh.pydata.org  Bokeh is a plottling library that is focussed on aesthetic layouts and interactivity to produce high-quality plots for web browsers.", 
+            "title": "Bokeh"
+        }, 
+        {
+            "location": "/work/python_libraries/#d3py", 
+            "text": "Website:  https://github.com/mikedewar/d3py  d3py is a plotting library to create interactive data visualizations based on d3.", 
+            "title": "d3py"
+        }, 
+        {
+            "location": "/work/python_libraries/#ggplot", 
+            "text": "Website:  https://github.com/yhat/ggplot  ggplot is a port of R's popular ggplot2 library, which brings the alternative syntax and unique visualization style to Python.", 
+            "title": "ggplot"
+        }, 
+        {
+            "location": "/work/python_libraries/#matplotlib", 
+            "text": "Website:  http://matplotlib.org  Matplotlib is Python's most popular and comprehensive plotting library that is especially useful in combination with NumPy/SciPy.", 
+            "title": "matplotlib"
+        }, 
+        {
+            "location": "/work/python_libraries/#plotly", 
+            "text": "Website:  https://plot.ly  Plotly is a plotting library that is focussed on adding interactivity to data visualizations and to share them via the web for collaborative data analysis. To produce interactive plots, plotly requires connection to the internet to stream data to the plotly servers, however, plots can also be saved in common image formats for offline use.", 
+            "title": "plotly"
+        }, 
+        {
+            "location": "/work/python_libraries/#prettyplotlib", 
+            "text": "Website:  http://olgabot.github.io/prettyplotlib/  Prettyplotlib is a nice enhancement-library that turns matplotlib's default styles into beautiful, presentation-ready plots based on information design and color perception studies.", 
+            "title": "prettyplotlib"
+        }, 
+        {
+            "location": "/work/python_libraries/#seaborn", 
+            "text": "Website:  http://web.stanford.edu/~mwaskom/software/seaborn/  Seaborn is based on matplotlib's core functionality and adds additional features (e.g., violin plots) and visual enhancements to create even more beautiful plots.", 
+            "title": "seaborn"
+        }, 
+        {
+            "location": "/work/python_libraries/#data-formatting-and-management", 
+            "text": "back to top", 
+            "title": "Data formatting and management"
+        }, 
+        {
+            "location": "/work/python_libraries/#csvkit", 
+            "text": "Website:  https://csvkit.readthedocs.org  csvkit is also known as the \"Swiss Army knife for comma-delimited data files\" that offers additional functionality and features over Python's in-built  csv  module. It comes with several shell command-line tools, e.g., csvgrep, csvsort, etc., but of course it can also be imported as library in Python.", 
+            "title": "csvkit"
+        }, 
+        {
+            "location": "/work/python_libraries/#pytables", 
+            "text": "Website:  http://www.pytables.org  PyTables is a library that combines HDF5 and NumPy for working with very large datasets efficiently. PyTables also makes use of C-extensions (via Cython) for fast data access and pulling data into NumPy or pandas arrays.", 
+            "title": "PyTables"
+        }, 
+        {
+            "location": "/work/python_libraries/#sqlite3", 
+            "text": "Website:  https://docs.python.org/3.4/library/sqlite3.html  Although, the  sqlite3  is part of Python's Standard Library, it is still worth mentioning this classic that provides a Python interface to SQLite databases. SQLitean open-source SQL database engine that is ideal for smaller workgroups, because it is a single locally stored database file (up to 140 Tb in size) that does not require -- in contrast to SQL -- any server infrastructure.", 
+            "title": "sqlite3"
+        }, 
+        {
             "location": "/work/python_notes/", 
             "text": "Python notes\n\n\n\n\nPackages\n\n\nSee \npackage list\n for more\n\n\n\n\nFundamental Libraries for Scientific Computing\n\n\nIPython Notebook\n\n\nNumPy\n\n\npandas\n\n\nSciPy\n\n\n\n\n\n\nMath and Statistics\n\n\nSymPy\n\n\nStatsmodels\n\n\n\n\n\n\nMachine Learning\n\n\nScikit-learn\n\n\nShogun\n\n\nPyBrain\n\n\nPyLearn2\n\n\nPyMC\n\n\n\n\n\n\nPlotting and Visualization\n\n\nBokeh\n\n\nd3py\n\n\nggplot\n\n\nmatplotlib\n\n\nplotly\n\n\nprettyplotlib\n\n\nseaborn\n\n\n\n\n\n\nData formatting and storage\n\n\ncsvkit\n\n\nPyTables\n\n\nsqlite3", 
             "title": "Python notes"
