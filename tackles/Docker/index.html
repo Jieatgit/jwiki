@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Mac commands - Jie's wiki</title>
+	<title>Docker - Jie's wiki</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -97,8 +97,8 @@
                     <ul class="dropdown-menu">
                     
                         
-<li >
-    <a href="../Docker/">Docker</a>
+<li class="active">
+    <a href="./">Docker</a>
 </li>
 
                     
@@ -115,8 +115,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Mac commands</a>
+<li >
+    <a href="../mac_commands/">Mac commands</a>
 </li>
 
                     
@@ -173,12 +173,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../github_host/">
+                    <a rel="next" href="../../fun/fun_places_to_go/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../markdown/">
+                    <a rel="prev" href="../Fortran_on_Ubuntu/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -192,183 +192,110 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#compress-files">Compress files</a></li>
+        <li class="main active"><a href="#docker-for-mac">Docker for mac</a></li>
         
-    
-        <li class="main "><a href="#disk-usage">Disk usage</a></li>
+            <li><a href="#quick-start">quick start</a></li>
         
-    
-        <li class="main "><a href="#vim-latex">vim-latex</a></li>
-        
-    
-        <li class="main "><a href="#purdue-server">Purdue server</a></li>
-        
-    
-        <li class="main "><a href="#virtualbox">virtualbox</a></li>
-        
-    
-        <li class="main "><a href="#grip">grip</a></li>
-        
-    
-        <li class="main "><a href="#sypder-py2">Sypder-py2</a></li>
-        
-    
-        <li class="main "><a href="#ssh-publicprivate-keys">SSH public/private keys</a></li>
-        
-    
-        <li class="main "><a href="#screen">screen</a></li>
+            <li><a href="#resources">resources</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h3 id="compress-files">Compress files</h3>
+<h1 id="docker-for-mac">Docker for mac</h1>
+<p>See the official <a href="https://docs.docker.com/v1.10/mac/step_one/">instruction page</a> for installation detail.</p>
+<h2 id="quick-start">quick start</h2>
 <ul>
+<li>start docker from /Applications or launchpad or spotlight search Docker</li>
 <li>
-<p>unpack .tar.gz files  </p>
-<pre><code>$ gunzip -c foo.tar.gz | tar xopf - 
-$ gunzip -c foo.tar.gz | tar xopft -
+<p>docker basics, see <a href="https://docs.docker.com/engine/tutorials/dockerizing/">examples</a></p>
+<pre><code>$ docker run ubuntu /bin/echo 'Hello world'  # start a container
+$ docker run -ti ubuntu /bin/bash            # start an interactive container
+
+$ docker ps                 # list running containers
+$ docker ps -a              # list all containers
+$ docker logs &lt;container&gt;   # Shows us the standard output of a container.
+$ docker stop &lt;container&gt;   # Stops running containers.
+$ docker start &lt;container&gt;  # restart a containers.
+$ docker rm &lt;container&gt;     # remover a containers.
+$ docker images             # list all images
+$ docker search ubuntu      # search for images
+$ docker pull ubuntu        # download an image
+$ docker pull ubuntu:14.04  # download an image with tag
+$ docker push ouruser/sinatra
+
+$ docker tag 5db5f8471261 ouruser/sinatra:devel
+$ docker images ouruser/sinatra
+$ docker rmi training/sinatra
+
+$ docker run -d -P --name web training/webapp python app.py
+$ docker inspect web
+$ docker stop web
+$ docker rm web
+
+$ docker version
+$ docker --help
+$ docker attach --help
 </code></pre>
 </li>
 <li>
-<p>unpack .tar files     </p>
-<pre><code>$ tar xopf foo.tar  
-$ tar xopft foo.tar
+<p>build a new image</p>
+<pre><code># method 1: modify and commit
+$ docker run -t -i training/sinatra /bin/bash
+root@0b2616b0e5a8:/# gem install json
+root@0b2616b0e5a8:/# exit
+$ docker commit -m "Added json gem" -a "Kate Smith" \
+0b2616b0e5a8 ouruser/sinatra:v2
+$ docker images
+#
+# method 2: build from a Dockerfile
+$ mkdir sinatra
+$ cd sinatra
+$ touch Dockerfile
+# save the following to the Dockerfile
+    # This is a comment
+    FROM ubuntu:14.04
+    MAINTAINER Kate Smith &lt;ksmith@example.com&gt;
+    RUN apt-get update &amp;&amp; apt-get install -y ruby ruby-dev
+    RUN gem install sinatra
+$ docker build -t ouruser/sinatra:v2 .
 </code></pre>
 </li>
 <li>
-<p>unpack .zip files </p>
-<pre><code>$ unzip -a foo.zip
+<p>mount host directory to a container</p>
+<pre><code>$ docker run -d -P --name web -v /host/path:/container/path training/webapp python app.py
+$ docker run --rm -it -v ~/.bash_history:/root/.bash_history ubuntu /bin/bash
+$
+# shared volume
+$ docker create -v /dbdata --name dbstore training/postgres /bin/true
+$ docker run -d --volumes-from dbstore --name db1 training/postgres
+$ docker run -d --volumes-from dbstore --name db2 training/postgres
+$ docker run --rm -v /foo -v awesome:/bar busybox top # remove volume
 </code></pre>
 </li>
 <li>
-<p>pack .zip files   </p>
-<pre><code>$ zip -r y.zip y.pdf
+<p>open gui apps in a docker container</p>
+<pre><code># install socat and xquartz first
+$ brew install socat
+$ socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+# in another window
+$ open -a XQuartz
+$ open -a /Applications/Docker/Docker\ Quickstart\ Terminal.app
+# in the Docker CPL terminal
+$ ifconfig # find ip address
+$ docker run -ti -e DISPLAY=192.168.1.115:0 ubuntu /bin/bash
+# should be able to apps gui
 </code></pre>
 </li>
 </ul>
-<h3 id="disk-usage">Disk usage</h3>
-<pre><code>$ du -h
-$ du -sh
-$ du -sh *
-$ du -sh dir_path
-$ du -a
-$ du -c # total contral
-$ du -sh #show total usage in the dir
-
-$ df -h
-</code></pre>
-
-<h3 id="vim-latex">vim-latex</h3>
-<ul>
-<li>vim-latex is install in ~/.vim</li>
-<li>to configure vim only for latex:</li>
-<li>edit file ~/.vim/ftplugin/tex_latexSuite.vim</li>
-</ul>
-<h3 id="purdue-server">Purdue server</h3>
-<p>conte.rcac.purdue.edu cluster:</p>
-<pre><code>$ module avail  # shows all available modules
-$ module load   # load module, for example:
-$ module load matlab/R2013a
-</code></pre>
-
-<h3 id="virtualbox">virtualbox</h3>
-<ul>
-<li>ID/pw ubuntu/chenjie</li>
-<li>
-<p>change ubuntu password:</p>
+<h2 id="resources">resources</h2>
 <ol>
-<li>reboot while hold shift</li>
-<li>Let your virtual Machine to capture your mouse.</li>
-<li>Hold the shift key down to get the grub menu.</li>
-<li>Select the recovery mode option.</li>
-<li>Select drop to root shell prompt.</li>
-<li>type command: mount -rw -o remount /</li>
-<li>Now, change with # passwd [username] (You can also see the list of users using # nano /etc/passwd).</li>
-</ol>
-</li>
-<li>
-<p>mount shared folder:</p>
-<ul>
-<li>add shared folder in virtualBox</li>
-<li>type command in ubuntu: <br />
-<code>$ sudo mount -t vboxsf -o uid=1000,gid=1000 share /home/&lt;user&gt;/vboxshare</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="grip">grip</h3>
-<p>use grip to convert md file to html file from command line. see <a href="https://github.com/joeyespo/grip">this link</a></p>
-<pre><code>grip 
-grip foo.md
-grip foo.md --export foo.html
-</code></pre>
-
-<h3 id="sypder-py2">Sypder-py2</h3>
-<p>add a new module to Syper</p>
-<pre><code>$python
-&gt;&gt;&gt;import talib
-&gt;&gt;&gt;talib  # copy the module location
-&gt;&gt;&gt;eixt()
-</code></pre>
-
-<p>If it is a .egg file</p>
-<pre><code>$cp new_module.egg /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7/
-unzip new_module.egg
-rm new_module.egg
-</code></pre>
-
-<p>if it is a folder</p>
-<pre><code>$cp -r new_module_folder /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7
-</code></pre>
-
-<h3 id="ssh-publicprivate-keys">SSH public/private keys</h3>
-<p>SSH (Secure Shell) can be set up with public/private key pairs so that you do not have to type the password each time. Because SSH is the transport for other services such as SCP (secure copy), SFTP (secure file transfer), and other services (CVS, etc), this can be very convenient and save you a lot of typing.</p>
-<p>On the local machine, type the BOLD part. The non-bold part is what you might see as output or prompt.</p>
-<ul>
-<li>
-<p>Step 1: </p>
-<pre><code>$ ssh-keygen -t dsa 
-    Generating public/private dsa key pair. 
-    Enter file in which to save the key (~/.ssh/id_dsa): (just type return) 
-    Enter passphrase (empty for no passphrase): (just type return) 
-    Enter same passphrase again: (just type return) 
-    Your identification has been saved in ~/.ssh/id_dsa 
-    Your public key has been saved in ~/.ssh/id_dsa.pub 
-    The key fingerprint is: 
-    Some really long string
-</code></pre>
-<ul>
-<li>Step 2: Then, paste the content of the local <code>~/.ssh/id_dsa.pub</code> file into the file <code>~/.ssh/authorized_keys</code> on the remote host.
-RSA instead of DSA<ul>
-<li>If you want something strong, you could try 
-<code>$ ssh-keygen -t rsa -b 4096</code></li>
-<li>Instead of the names <code>id_dsa and id_dsa.pub</code>, it will be <code>id_rsa and id_rsa.pub</code> , etc.</li>
-<li>The rest of the steps are identical.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="screen">screen</h3>
-<ul>
-<li>start screen</li>
-</ul>
-<pre><code>screen -ls      # list all screen sessions
-screen          # start screen
-screen -S Name  # start screen and give it a name
-screen -r       # resume last screen
-screen -r Name  # resume screen with a name
-</code></pre>
-
-<ul>
-<li>exit</li>
-</ul>
-<pre><code>exit
-C-a d
-C-a D D
-C-a \
-</code></pre></div>
+<li><a href="https://docs.docker.com/v1.10/engine/quickstart/">quickstart Dock engine 1.10  at docker.com</a></li>
+<li><a href="https://docs.docker.com/engine/getstarted/">quickstart Dock engine at docker.com</a></li>
+<li><a href="https://training.docker.com/">docker training page</a></li>
+<li><a href="https://training.docker.com/self-paced-training">docker training - video tutorials - self paced</a></li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
