@@ -313,13 +313,14 @@ grip foo.md --export foo.html
 </code></pre>
 
 <p>If it is a .egg file</p>
-<pre><code>$cp new_module.egg /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7/
+<pre><code>$cd /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7/
+$cp module_path/new_module.egg .
 unzip new_module.egg
 rm new_module.egg
 </code></pre>
 
 <p>if it is a folder</p>
-<pre><code>$cp -r new_module_folder /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7
+<pre><code>$cp -r module_path/new_module_folder /Applications/Spyder-Py2.app/Contents/Resources/lib/python2.7
 </code></pre>
 
 <h3 id="ssh-publicprivate-keys">SSH public/private keys</h3>
